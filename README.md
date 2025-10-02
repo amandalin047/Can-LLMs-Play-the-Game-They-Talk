@@ -1,5 +1,5 @@
 # Can LLMs Play the Game They Talk?
-## A Linguistic and Behaviorial Analysis of Rationality in Kuhn Poker
+## A Linguistic and Behaviorial Analysis of Rationality in [Kuhn Poker](https://sites.math.rutgers.edu/~zeilberg/akherim/PokerPapers/Kuhn1951.pdf)
 ### 🧠 Built With
 ![OpenAI](https://img.shields.io/badge/OpenAI-API-blue?logo=openai)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-green?logo=langchain)
