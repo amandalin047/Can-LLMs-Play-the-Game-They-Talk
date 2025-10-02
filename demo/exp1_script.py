@@ -484,7 +484,6 @@ def kuhn_auto_input(num, memories, session_ids, llm_player_num=1, bot_strategy='
                         print('\n', history + f'> ({player1_card}, {player2_card}; Check, Bet / {llm_action})\n')
                         prompt = "end chat"
 
-
         else: # llm_player_num == 2:
             player1_card, player2_card = card_sequence[N-1]
             previous_prompt = memories[session_ids[0]].chat_memory.messages[-2].content 
