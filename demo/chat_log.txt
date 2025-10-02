@@ -1,0 +1,575 @@
+**SESSION 0**
+[Bot/Human]: You will be playing 30 repeated rounds of a Poker game as player 1 against an opponent (player 2). Here are the game rules:
+Each player antes 1 chip. Each player is dealt a unique card from a deck consisting of only a Jack (J), a Queen (Q), and a King (K). The third card not dealt is left unseen.
+Player 1 can check or bet 1 chip.
+If player 1 checks, player 2 can check or bet 1 chip.
+  > If player 2 checks, a showdown occurs.
+  > If player 2 bets, player 1 can fold or call.
+      > If player 1 folds, player 2 takes the entire pot.
+      > If player 1 calls, a showdown occurs.
+If player 1 bets, player 2 can fold or call.
+  > If player 2 folds, player one takes the entire pot.
+  > If player 2 calls, a showdown occurs.
+
+At the beginning of each round (except for the first), you will be provided with a complete history of past game results in shorthand notation, and the card you are dealt in the current round will be given at the end:
+
+- Each pair of parentheses denotes a round.
+    - The card and the action on the left are yours (player 1).
+    - The card and the action on the right are player 2's.
+    - The action after "/" denotes your (player 1's) action after player 2 has taken an action, if the round comes to this.
+    - In this example: in round 1, you (player 1) had a K and bet, while player 2 had a Q and subsequently called. In round 2, you (payer 1) had a J and checked, player 2 had a K and subsequently bet, which led to your (player 1's) turn again, where you folded. So on and so forth.
+- The card after "|" denotes the card you are dealt in the current round.
+
+In addition, as the rounds progress, you will be provided with a game results summary. The summary will include the average payoffs for both players and the action frequencies for each card. The summary will be updated every 15 rounds.
+Please use the history and summary provided to analyze game trends and opponent behavior. Adapt your strategy and choose your actions accordingly. In each round, please provide your choice of action as player 1. Note that if you checked and your opponent bet, you will be asked again to call or fold.
+Round 1 starts now. Your card is Q. Please provide your choice of action in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: You checked and your opponent bet, so it's your turn to call or fold (Your card is J). Please provide your choice of action in the following format without any explanation: Call/Fold.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Fold
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: You checked and your opponent bet, so it's your turn to call or fold (Your card is J). Please provide your choice of action in the following format without any explanation: Call/Fold.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Fold
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) > (Q, K; Bet, Call) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: You checked and your opponent bet, so it's your turn to call or fold (Your card is J). Please provide your choice of action in the following format without any explanation: Call/Fold.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Fold
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) > (Q, K; Bet, Call) > (J, K; Check, Bet / Fold) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) > (Q, K; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Call) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) > (Q, K; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Call) > (Q, K; Bet, Call) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: (Q, J; Bet, Fold) > (K, Q; Bet, Call) > (J, Q; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) > (Q, K; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Call) > (Q, K; Bet, Call) > (Q, J; Bet, Fold) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) > (K, J; Bet, Fold) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) > (K, J; Bet, Fold) > (J, Q; Check, Check) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) > (K, J; Bet, Fold) > (J, Q; Check, Check) > (K, Q; Bet, Fold) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) > (K, J; Bet, Fold) > (J, Q; Check, Check) > (K, Q; Bet, Fold) > (Q, K; Bet, Call) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) > (K, J; Bet, Fold) > (J, Q; Check, Check) > (K, Q; Bet, Fold) > (Q, K; Bet, Call) > (J, Q; Check, Check) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: -0.2)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 4 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: 0.2)
+K: Bet * 3 (60.0%) / Check * 0 (0.0%) / Call * 2 (40.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 1 (33.33%) / Call * 2 (66.67%) / Fold * 0 (0.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 2 (100.0%)
+> (K, J; Bet, Fold) > (K, J; Bet, Fold) > (K, Q; Bet, Call) > (K, Q; Bet, Fold) > (K, J; Bet, Fold) > (J, Q; Check, Check) > (K, Q; Bet, Fold) > (Q, K; Bet, Call) > (J, Q; Check, Check) > (K, J; Bet, Fold) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: You checked and your opponent bet, so it's your turn to call or fold (Your card is J). Please provide your choice of action in the following format without any explanation: Call/Fold.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Fold
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, J; Bet, Fold) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, J; Bet, Fold) > (Q, K; Bet, Call) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, J; Bet, Fold) > (Q, K; Bet, Call) > (Q, J; Bet, Fold) | Your card is Q 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, J; Bet, Fold) > (Q, K; Bet, Call) > (Q, J; Bet, Fold) > (Q, J; Bet, Fold) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: You checked and your opponent bet, so it's your turn to call or fold (Your card is J). Please provide your choice of action in the following format without any explanation: Call/Fold.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Fold
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, J; Bet, Fold) > (Q, K; Bet, Call) > (Q, J; Bet, Fold) > (Q, J; Bet, Fold) > (J, K; Check, Bet / Fold) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: 0.25)
+K: Bet * 9 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 5 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 6 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 3 (100.0%) 
+
+Player 2 (Average Payoff: -0.25)
+K: Bet * 3 (50.0%) / Check * 0 (0.0%) / Call * 3 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (37.5%) / Call * 3 (37.5%) / Fold * 2 (25.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 6 (100.0%)
+> (J, Q; Check, Check) > (Q, K; Bet, Call) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, J; Bet, Fold) > (Q, K; Bet, Call) > (Q, J; Bet, Fold) > (Q, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (J, Q; Check, Check) | Your card is J 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Check
+
+**SESSION 0**
+[Bot/Human]: 
+ROUNDS 1 - 30
+
+Player 1 (Average Payoff: -0.075)
+K: Bet * 10 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 10 (100.0%) / Check * 0 (0.0%) 
+J: Bet * 0 (0.0%) / Check * 10 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 0 (nan%) / Fold * 0 (nan%) 
+J: Call * 0 (0.0%) / Fold * 5 (100.0%) 
+
+Player 2 (Average Payoff: 0.075)
+K: Bet * 5 (50.0%) / Check * 0 (0.0%) / Call * 5 (50.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 5 (50.0%) / Call * 3 (30.0%) / Fold * 2 (20.0%)
+J: Bet * 0 (0.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 10 (100.0%)
+> (J, Q; Check, Check) | Your card is K 
+ Based on past game histories and opponent behavior, estimate your action probabilities and choose accordingly. Please provide your choice of action as player 1 in the following format without any explanation: Bet/Check.
+
+[<exp1_script.OpenAIChatWrapper object at 0x1329d6750>]: Bet
+
