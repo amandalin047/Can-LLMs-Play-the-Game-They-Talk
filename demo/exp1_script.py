@@ -10,8 +10,7 @@ import os
 import re
 import random as rand
 from collections import namedtuple
-import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
+
 
 class OpenAIChatWrapper:
     def __init__(self, model, **kwargs):
@@ -528,3 +527,43 @@ def kuhn_auto_input(num, memories, session_ids, llm_player_num=1, bot_strategy='
                         print('\n', history + f'> ({player1_card}, {player2_card}; Check, Bet / {_bot_action_})\n')
                         prompt = "end chat"
         return [prompt]
+    
+def get_history_from_file(filename):
+    f = open(filename, "r")
+    lines = list(filter(lambda x: "gpt" not in x and "o3" not in x, f.readlines()))
+    f.close()
+    history = " > ".join(lines)
+    return history
+
+def get_payoff_per_round(player_num, history=None, filename=None):
+    if history is None:
+        history = get_history_from_file(filename)
+
+  
+    history = [h.strip().split(";") for h in history.split('>')]
+    payoff_dict = {' Bet, Fold)': -1, ' Bet, Call)': 2, ' Check, Check)': 1,
+                   ' Check, Bet / Fold)': -1, ' Check, Bet / Call)': 2,
+                  }
+    payoffs = []
+    if player_num == 1:
+        for card_config, actions_played in history:
+            sign = 1 if card_config in ('(K, Q' , '(K, J' , '(Q, J') else -1
+            if "/ Fold" in actions_played:
+                payoff = -1 
+            elif "Bet, Fold" in actions_played:
+                payoff = 1 
+            else:
+                payoff = payoff_dict[actions_played] * sign 
+            payoffs.append(payoff)
+
+    else:
+        for card_config, actions_played in history:
+            sign = 1 if card_config in ('(Q, K' , '(J, K' , '(J, Q') else -1
+            if "/ Fold" in actions_played:
+                payoff = 1
+            elif "Bet, Fold" in actions_played:
+                payoff = -1
+            else:
+                payoff = payoff_dict[actions_played] * sign
+            payoffs.append(payoff) 
+    return payoffs
