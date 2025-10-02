@@ -1,0 +1,1721 @@
+Testing model gpt-4-turbo @ temp = 0.2  
+< Card is K >
+    < Strategy: choose an action at random with equal probability. >
+    Given that you have the King (K), the possible cards for your opponent (player 2) are either the Jack (J) or the Queen (Q). The unseen card could be either of these two as well. Here's how to evaluate your strategic options:
+
+### 1. If Player 1 (You) Checks:
+- **If Player 2 Checks:** Showdown occurs. You win against J or Q. **Net gain: +1 chip** (since each player anted 1 chip, and you win the pot of 2 chips).
+- **If Player 2 Bets (1 chip):**
+  - **If You Fold:** You lose your ante of 1 chip.
+  - **If You Call:** Showdown occurs. You win against J or Q. **Net gain: +1 chip** (pot becomes 4 chips, you've contributed 2 chips).
+
+Given Player 2's random strategy (50% check, 50% bet):
+- Probability of showdown if Player 2 bets and you call: 100% (since you always call with K).
+- Expected gain if you check:
+  - \(0.5 \times (+1) + 0.5 \times (0.5 \times (-1) + 0.5 \times (+1)) = 0.5 + 0.5 \times 0 = +0.5\) chips.
+
+### 2. If Player 1 (You) Bets (1 chip):
+- **If Player 2 Folds:** You win the pot of 3 chips (your ante, Player 2's ante, your bet). **Net gain: +2 chips** (since you contributed 2 chips).
+- **If Player 2 Calls:** Showdown occurs. You win against J or Q. **Net gain: +2 chips** (pot becomes 4 chips, you've contributed 2 chips).
+
+Given Player 2's random strategy (50% fold, 50% call):
+- Expected gain if you bet:
+  - \(0.5 \times (+2) + 0.5 \times (+2) = 1 + 1 = +2\) chips.
+
+### Strategy Evaluation:
+- **Expected gain if you check:** +0.5 chips.
+- **Expected gain if you bet:** +2 chips.
+
+### Conclusion:
+Given that your card is K, the best strategy is to bet. This maximizes your expected gain, as betting either results in Player 2 folding and you winning the pot directly, or going to a showdown where you have the highest card and will win. The expected gain from betting (+2 chips) is higher than the expected gain from checking (+0.5 chips).
+    < Strategy: always call after you bet, and always check after you check. >
+    Given the scenario where you have a King (K), the possible cards your opponent could have are either a Jack (J) or a Queen (Q). The third card, which is not dealt, could be either of these two depending on what your opponent holds.
+
+### Step 1: Analyze Possible Opponent Cards
+- If your opponent has a Jack (J), you have the highest card.
+- If your opponent has a Queen (Q), you still have the highest card.
+
+### Step 2: Pot Size and Contributions
+- Each player antes 1 chip, so the starting pot is 2 chips.
+
+### Step 3: Evaluate Player 1's Strategies
+#### Strategy A: Check
+1. **Player 1 checks**: 
+   - **Player 2 checks** (as per their strategy): Showdown occurs.
+     - You win with King against either Jack or Queen.
+     - **Outcome**: You win 2 chips (pot size), net gain = 1 chip (since you initially contributed 1 chip).
+   - **Player 2 bets 1 chip** (though this won't happen as per opponent's strategy, but for completeness):
+     - **Player 1 folds**: You lose your ante of 1 chip.
+     - **Player 1 calls**: Showdown occurs; you win with King.
+       - **Outcome**: Pot is now 4 chips; you win 4 chips, net gain = 2 chips (you contributed 2 chips in total).
+
+#### Strategy B: Bet 1 Chip
+1. **Player 1 bets 1 chip**:
+   - **Player 2 calls** (as per their strategy): Showdown occurs.
+     - You win with King against either Jack or Queen.
+     - **Outcome**: Pot is now 4 chips; you win 4 chips, net gain = 2 chips (you contributed 2 chips in total).
+
+### Step 4: Expected Payoff Calculation
+- **If you check**: You are guaranteed a win of 1 chip (since opponent always checks if you check).
+- **If you bet**: You are guaranteed a win of 2 chips (since opponent always calls if you bet).
+
+### Conclusion
+Given that your opponent's strategy is to always call after you bet, and you hold the highest card (King), the optimal move is to **bet 1 chip**. This strategy maximizes your expected payoff, ensuring a net gain of 2 chips as opposed to just 1 chip if you were to check.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Given that your card is a King (K), your opponent (player 2) could either have a Queen (Q) or a Jack (J). The third card, which is not dealt, is the remaining one of these three.
+
+### Step 1: Evaluate Opponent's Possible Cards and Strategies
+- If opponent has a Queen (Q): They will check if you check, and call your bet with a probability of 1/3.
+- If opponent has a Jack (J): They will fold if you bet, and bet with a probability of 1/3 if you check.
+
+### Step 2: Calculate Pot Size and Net Gain or Loss
+- Initial pot size: 2 chips (1 chip from each player).
+
+### Step 3: Evaluate Expected Payoff for Each Strategy
+#### Strategy 1: Player 1 checks
+- If Player 2 has Q:
+  - Player 2 checks: Showdown occurs. You win with K > Q. Pot = 2 chips. Gain = 2 - 1 = 1 chip.
+- If Player 2 has J:
+  - Player 2 bets 1/3 of the time: You can call. Showdown occurs. You win with K > J. Pot = 4 chips. Gain = 4 - 2 = 2 chips.
+  - Player 2 checks 2/3 of the time: Showdown occurs. You win with K > J. Pot = 2 chips. Gain = 2 - 1 = 1 chip.
+
+Expected gain if you check:
+- Probability opponent has Q = 1/2, Probability opponent has J = 1/2.
+- Gain if opponent has Q = 1 chip.
+- Gain if opponent has J = (1/3 * 2 chips) + (2/3 * 1 chip) = 0.67 + 0.67 = 1.33 chips.
+- Expected gain = (1/2 * 1) + (1/2 * 1.33) = 0.5 + 0.67 = 1.17 chips.
+
+#### Strategy 2: Player 1 bets
+- If Player 2 has Q:
+  - Player 2 calls 1/3 of the time: Showdown occurs. You win with K > Q. Pot = 4 chips. Gain = 4 - 2 = 2 chips.
+  - Player 2 folds 2/3 of the time: You take the pot of 3 chips. Gain = 3 - 2 = 1 chip.
+- If Player 2 has J:
+  - Player 2 always folds: You take the pot of 3 chips. Gain = 3 - 2 = 1 chip.
+
+Expected gain if you bet:
+- Probability opponent has Q = 1/2, Probability opponent has J = 1/2.
+- Gain if opponent has Q = (1/3 * 2 chips) + (2/3 * 1 chip) = 0.67 + 0.67 = 1.33 chips.
+- Gain if opponent has J = 1 chip.
+- Expected gain = (1/2 * 1.33) + (1/2 * 1) = 0.67 + 0.5 = 1.17 chips.
+
+### Conclusion
+Both checking and betting yield an expected gain of approximately 1.17 chips. However, betting might be slightly better because it simplifies the game and reduces the scenarios where you have to make further decisions (like calling a bet). Thus, **betting** is a recommended strategy when holding a King.  
+< Card is Q >
+    < Strategy: choose an action at random with equal probability. >
+    Given that you are dealt a Queen (Q), the possible cards your opponent (player 2) could have are either a Jack (J) or a King (K). The third card, which is not seen by either player, is the remaining card from the set {J, Q, K}.
+
+### Step-by-Step Analysis:
+
+#### 1. **Possible Cards for Opponent:**
+   - If opponent has J: You win in a showdown.
+   - If opponent has K: You lose in a showdown.
+
+#### 2. **Pot Size and Contributions:**
+   - Each player antes 1 chip, so the starting pot is 2 chips.
+
+#### 3. **Evaluate Expected Payoff for Each Strategy:**
+
+### Strategy A: Player 1 Checks
+   - **If Player 2 Checks:** Showdown occurs. You win if opponent has J, lose if K.
+     - Probability opponent has J = 1/2 (since one of two remaining cards)
+     - Probability opponent has K = 1/2
+     - Expected payoff = (1/2 * 2 chips) - (1/2 * 0 chips) = 1 chip - 0 chips = 1 chip
+
+   - **If Player 2 Bets (1 chip):** You can fold or call.
+     - **Fold:** You lose your ante of 1 chip.
+     - **Call:** Showdown occurs. Same win/loss probabilities as above.
+       - Expected payoff if call = (1/2 * 3 chips) - (1/2 * 1 chip) = 1.5 chips - 0.5 chips = 1 chip
+
+   - **Overall Expected Payoff if Check:**
+     - If Player 2 checks: 1 chip
+     - If Player 2 bets and you fold: -1 chip
+     - If Player 2 bets and you call: 1 chip
+     - Since Player 2 chooses actions randomly, each scenario (check, bet) has a probability of 1/2.
+     - Expected payoff = 1/2 * 1 chip + 1/2 * (1/2 * -1 chip + 1/2 * 1 chip) = 1/2 chip + 0 = 1/2 chip
+
+### Strategy B: Player 1 Bets (1 chip)
+   - **If Player 2 Folds:** You win the pot of 3 chips (your 2 chips + opponent's 1 chip).
+   - **If Player 2 Calls:** Showdown occurs. Same win/loss probabilities as above.
+     - Expected payoff = (1/2 * 4 chips) - (1/2 * 2 chips) = 2 chips - 1 chip = 1 chip
+
+   - **Overall Expected Payoff if Bet:**
+     - If Player 2 folds: 2 chips
+     - If Player 2 calls: 1 chip
+     - Expected payoff = 1/2 * 2 chips + 1/2 * 1 chip = 1 chip + 0.5 chips = 1.5 chips
+
+### Conclusion:
+Comparing the expected payoffs:
+- **Checking:** Expected payoff = 1/2 chip
+- **Betting:** Expected payoff = 1.5 chips
+
+Given these calculations, **betting** is the optimal strategy when holding a Queen, as it maximizes your expected payoff against an opponent who acts randomly.
+    < Strategy: always call after you bet, and always check after you check. >
+    Given the rules and the situation, let's analyze the best move for you (Player 1) when holding a Queen (Q).
+
+### Step 1: Possible Opponent Cards
+Your card is Q. The remaining cards in the deck are J and K. Therefore, your opponent (Player 2) could either have a J or a K.
+
+### Step 2: Pot Size and Contributions
+Each player antes 1 chip, so the starting pot is 2 chips.
+
+### Step 3: Evaluate Expected Payoff for Each Strategy
+
+#### Strategy A: Player 1 Checks
+- If Player 1 checks, Player 2 will check (as per their strategy).
+- Showdown occurs:
+  - If Player 2 has J, Player 1 wins (Q > J). You win 2 chips (pot size), net gain = 1 chip (since you contributed 1 chip).
+  - If Player 2 has K, Player 1 loses (Q < K). You lose your ante of 1 chip.
+
+#### Strategy B: Player 1 Bets
+- If Player 1 bets 1 chip, the pot becomes 3 chips.
+- Player 2 will always call (as per their strategy).
+- Showdown occurs:
+  - If Player 2 has J, Player 1 wins (Q > J). You win 3 chips (pot size), net gain = 1 chip (since you contributed 2 chips).
+  - If Player 2 has K, Player 1 loses (Q < K). You lose your total bet of 2 chips.
+
+### Step 4: Calculate Expected Value (EV) for Each Strategy
+
+#### EV Calculation for Checking:
+- Probability Player 2 has J = 1/2 (since there are only two possible cards).
+- Probability Player 2 has K = 1/2.
+- EV(Check) = (1/2 * 1 chip) + (1/2 * -1 chip) = 0.5 - 0.5 = 0 chips.
+
+#### EV Calculation for Betting:
+- Probability Player 2 has J = 1/2.
+- Probability Player 2 has K = 1/2.
+- EV(Bet) = (1/2 * 1 chip) + (1/2 * -2 chips) = 0.5 - 1 = -0.5 chips.
+
+### Conclusion:
+The expected value of checking (0 chips) is higher than the expected value of betting (-0.5 chips). Therefore, the optimal strategy when holding a Queen (Q) is to check. This strategy minimizes potential losses while still maintaining a chance to win the pot when the opponent holds a Jack.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Given that you hold a Queen (Q), the possible cards your opponent (player 2) could hold are either a King (K) or a Jack (J). The third card, which is not dealt, is the one you do not hold and your opponent does not hold. 
+
+### Step 1: Evaluate Opponent's Possible Cards
+- If opponent has K: They will always bet or call.
+- If opponent has J: They will fold if you bet, and bet with a probability of 1/3 if you check.
+
+### Step 2: Pot Size and Contributions
+- Initial pot: 2 chips (1 chip from each player as ante).
+
+### Step 3: Evaluate Expected Payoff for Each Strategy
+#### Strategy A: Player 1 Checks
+1. **Player 2 has K (probability = 1/2)**
+   - Player 2 bets (always).
+   - Player 1 can fold or call:
+     - Fold: Lose 1 chip (your ante).
+     - Call: Lose 2 chips (ante + call) if showdown occurs and you lose (which you will with Q vs K).
+   
+2. **Player 2 has J (probability = 1/2)**
+   - Player 2 bets with probability 1/3, checks with probability 2/3.
+     - If Player 2 bets and Player 1 calls: Win 3 chips (pot of 4 chips minus your 1 chip ante).
+     - If Player 2 checks, showdown occurs: Win 2 chips (pot of 2 chips minus your 1 chip ante).
+
+   **Expected value when checking**:
+   - \( \text{EV} = \frac{1}{2} \left( -1 \right) + \frac{1}{2} \left( \frac{1}{3} \times 3 + \frac{2}{3} \times 2 \right) \)
+   - \( \text{EV} = -0.5 + \frac{1}{2} \left( 1 + \frac{4}{3} \right) \)
+   - \( \text{EV} = -0.5 + \frac{1}{2} \times \frac{7}{3} = -0.5 + \frac{7}{6} \)
+   - \( \text{EV} = \frac{1}{6} \) (slightly positive)
+
+#### Strategy B: Player 1 Bets 1 Chip
+1. **Player 2 has K (probability = 1/2)**
+   - Player 2 calls (always).
+   - Showdown occurs: Lose 3 chips (ante + bet + call).
+
+2. **Player 2 has J (probability = 1/2)**
+   - Player 2 folds (always).
+   - Win 3 chips (pot of 3 chips).
+
+   **Expected value when betting**:
+   - \( \text{EV} = \frac{1}{2} \left( -3 \right) + \frac{1}{2} \times 3 \)
+   - \( \text{EV} = -1.5 + 1.5 \)
+   - \( \text{EV} = 0 \) (neutral)
+
+### Conclusion
+Given the expected values calculated:
+- Checking results in a slightly positive expected value (\(\frac{1}{6}\) chip).
+- Betting results in a neutral expected value (0 chips).
+
+**Optimal Move**: Check. This move has a slightly positive expected value, minimizing potential losses while still providing a chance to win if the opponent holds a Jack and either checks or bets and loses at showdown.  
+< Card is J >
+    < Strategy: choose an action at random with equal probability. >
+    Given that you are dealt a Jack (J), the possible cards your opponent (player 2) could have are either a Queen (Q) or a King (K). Let's analyze the expected payoff for each strategy you can adopt: checking or betting.
+
+### Step 1: Analyze the Possible Outcomes
+
+#### If You Check:
+1. **Player 2 Checks**: 
+   - The showdown occurs. You lose if player 2 has Q or K. The probability of losing is 100% since J is the lowest card.
+   - **Net result**: Lose 1 chip (your ante).
+
+2. **Player 2 Bets 1 Chip**:
+   - You can fold or call.
+   - **If You Fold**: You lose your ante of 1 chip.
+   - **If You Call**: 
+     - Showdown occurs. You lose if player 2 has Q or K.
+     - **Net result if you call and lose**: Lose 2 chips (your ante and your call).
+
+#### If You Bet 1 Chip:
+1. **Player 2 Folds**:
+   - You win the pot, which includes your ante, player 2's ante, and player 2's fold.
+   - **Net result**: Win 2 chips (2 antes).
+
+2. **Player 2 Calls**:
+   - Showdown occurs. You lose if player 2 has Q or K.
+   - **Net result if you lose**: Lose 2 chips (your ante and your bet).
+
+### Step 2: Calculate Expected Payoffs
+
+#### If You Check:
+- **Probability Player 2 Checks**: 0.5 (since they choose randomly)
+  - Expected result: Lose 1 chip.
+- **Probability Player 2 Bets**: 0.5
+  - **Probability You Fold**: 0.5 (random choice)
+    - Expected result: Lose 1 chip.
+  - **Probability You Call**: 0.5
+    - Expected result: Lose 2 chips.
+
+  **Expected Payoff if You Check**:
+  \[
+  (0.5 \times -1) + (0.5 \times [(0.5 \times -1) + (0.5 \times -2)]) = -0.5 - 0.75 = -1.25 \text{ chips}
+  \]
+
+#### If You Bet:
+- **Probability Player 2 Folds**: 0.5
+  - Expected result: Win 2 chips.
+- **Probability Player 2 Calls**: 0.5
+  - Expected result: Lose 2 chips.
+
+  **Expected Payoff if You Bet**:
+  \[
+  (0.5 \times 2) + (0.5 \times -2) = 1 - 1 = 0 \text{ chips}
+  \]
+
+### Step 3: Choose the Best Strategy
+
+Comparing the expected payoffs:
+- **If You Check**: Expected loss of 1.25 chips.
+- **If You Bet**: Expected result is 0 chips (break-even).
+
+### Conclusion:
+Given the calculations, your best move when holding a Jack (J) is to bet 1 chip. This strategy minimizes your expected loss, essentially breaking even in expectation, compared to a guaranteed loss if you check.
+    < Strategy: always call after you bet, and always check after you check. >
+    Given your card is J, the possible cards for your opponent (player 2) are either Q or K. Since the opponent's strategy is to always call after you bet and always check after you check, let's analyze the outcomes based on your possible actions:
+
+### 1. If Player 1 (You) Checks:
+- **Player 2 Checks:** Showdown occurs.
+  - If Player 2 has Q: You lose (J < Q).
+  - If Player 2 has K: You lose (J < K).
+- **Expected Outcome:** Since both Q and K beat J, you will lose the pot. The pot is 2 chips (1 from each player). You lose 1 chip.
+
+### 2. If Player 1 (You) Bets:
+- **Player 2 Calls:** Showdown occurs.
+  - If Player 2 has Q: You lose (J < Q).
+  - If Player 2 has K: You lose (J < K).
+- **Expected Outcome:** You bet 1 chip, making the total pot 4 chips (2 from each player). Since both Q and K beat J, you will lose the pot. You lose 2 chips (1 ante + 1 bet).
+
+### Calculation of Expected Payoff:
+- **Probability Analysis:**
+  - Probability Player 2 has Q = 1/2 (since Player 2 could have either Q or K).
+  - Probability Player 2 has K = 1/2.
+
+- **Expected Payoff if You Check:**
+  - Expected loss = 1 chip (you lose the showdown in both scenarios).
+
+- **Expected Payoff if You Bet:**
+  - Expected loss = 2 chips (you lose the showdown in both scenarios).
+
+### Conclusion:
+Given the opponent's strategy of always calling your bet and the fact that any card they hold (Q or K) beats your J, the least costly strategy for you is to **check**. By checking, you minimize your loss to 1 chip, as opposed to betting where you would lose 2 chips. Thus, the optimal move for you, holding a J, is to check and then decide whether to fold or call based on Player 2's action (though in this case, Player 2 will always check if you check).
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Given that you are holding a Jack (J), your opponent (player 2) could either have a Queen (Q) or a King (K). The third card, which neither of you has, is the remaining card from the set {J, Q, K}.
+
+### Step 1: Evaluate the possible outcomes based on your card (J)
+
+**If you check:**
+- **Opponent has Q:** They will check. Showdown occurs. J loses to Q.
+- **Opponent has K:** They will bet. You can either fold or call:
+  - **Fold:** You lose your ante (1 chip).
+  - **Call:** Showdown occurs. J loses to K.
+
+**If you bet:**
+- **Opponent has Q:** They will call 1/3 of the time and fold 2/3 of the time.
+  - **Call:** Showdown occurs. J loses to Q.
+  - **Fold:** You win the pot (2 chips from antes, 1 chip from your bet, 1 chip from their fold).
+- **Opponent has K:** They will always call. Showdown occurs. J loses to K.
+
+### Step 2: Calculate the expected payoff for each strategy
+
+**Checking:**
+- **Against Q:** Lose 2 chips (both antes).
+- **Against K:** 
+  - **Fold:** Lose 1 chip.
+  - **Call:** Lose 3 chips (both antes and your call).
+  - Expected loss against K when checking = 1/3 * (-1) + 2/3 * (-3) = -7/3 chips.
+
+**Betting:**
+- **Against Q:** 
+  - **Call:** Lose 4 chips (both antes and both bets).
+  - **Fold:** Win 4 chips.
+  - Expected payoff against Q when betting = 1/3 * (-4) + 2/3 * 4 = 8/3 - 4/3 = 4/3 chips.
+- **Against K:** Lose 4 chips (both antes and both bets).
+
+### Step 3: Calculate overall expected payoff
+
+Assuming equal probability of opponent having Q or K:
+- **Expected payoff when checking:** 1/2 * (-2) + 1/2 * (-7/3) = -1 - 7/6 = -13/6 ≈ -2.17 chips.
+- **Expected payoff when betting:** 1/2 * (4/3) + 1/2 * (-4) = 4/6 - 24/6 = -20/6 = -10/3 ≈ -3.33 chips.
+
+### Conclusion:
+Based on the expected payoffs, checking results in a smaller expected loss (-2.17 chips) compared to betting (-3.33 chips). Therefore, the optimal move when holding a Jack (J) is to check.
+===============
+Testing model gpt-4-turbo @ temp = 0.8  
+< Card is K >
+    < Strategy: choose an action at random with equal probability. >
+    Given that you, as player 1, hold the King (K), the opponent (player 2) could either have a Jack (J) or a Queen (Q). The remaining unknown card is therefore either the Queen or the Jack. Here’s how we can analyze the possible outcomes for both checking and betting:
+
+### Analysis of Your Card: King (K)
+**Your Card:** K
+**Possible Opponent Cards:** J, Q
+
+### Pot Size Initially
+- Each player antes 1 chip. 
+- **Initial Pot:** 2 chips
+
+### Strategy 1: Checking
+1. **Player 2 Checks**
+   - Showdown occurs.
+   - With K, you win against J or Q.
+   - **Net Gain:** Pot of 2 chips - Your 1 chip ante = +1 chip
+
+2. **Player 2 Bets 1 Chip (50% chance)**
+   - You can fold or call.
+     - **If You Fold:** You lose your 1 chip ante.
+     - **If You Call:** Showdown occurs. You win against J or Q.
+       - Pot becomes 4 chips.
+       - **Net Gain if You Call:** Pot of 4 chips - Your total contribution of 2 chips (1 ante + 1 call) = +2 chips
+
+**Expected Value if You Check:** 
+- \( \frac{1}{2}(+1) + \frac{1}{2} \left( \frac{1}{2}(-1) + \frac{1}{2}(+2) \right) \)
+- \( = \frac{1}{2} + \frac{1}{2} \left( \frac{1}{2} \right) = 0.75 \)
+
+### Strategy 2: Betting 1 Chip
+1. **Player 2 Folds (50% chance)**
+   - You take the pot of 3 chips (your ante, opponent's ante, your bet).
+   - **Net Gain:** 3 chips - Your total contribution of 2 chips = +1 chip
+
+2. **Player 2 Calls (50% chance)**
+   - Showdown occurs. You win against J or Q.
+   - Pot becomes 4 chips.
+   - **Net Gain:** 4 chips - Your total contribution of 2 chips = +2 chips
+
+**Expected Value if You Bet:** 
+- \( \frac{1}{2}(+1) + \frac{1}{2}(+2) = 0.5 + 1 = 1.5 \)
+
+### Conclusion
+Comparing the expected values:
+- **Checking:** Expected value of +0.75 chips
+- **Betting:** Expected value of +1.5 chips
+
+Given these calculations, **betting** is a better strategy as it offers a higher expected value. This is largely because holding the King is a strong position against either a Jack or Queen and betting maximizes the potential gain from this strong position.
+    < Strategy: always call after you bet, and always check after you check. >
+    Given that you, as player 1, have the King (K), the possible cards for player 2 are either the Jack (J) or the Queen (Q). Here's how we can think through each possible move and its outcomes:
+
+1. **Your Card: K**
+   - Possible Opponent's Cards: J or Q
+
+### If Player 1 Bets:
+Since the opponent always calls after you bet:
+
+- **Opponent's Card is J:**
+  - You win. The pot consists of your ante (1 chip), your bet (1 chip), opponent's ante (1 chip), and opponent's call (1 chip) = 4 chips total. 
+  - Your net gain = 4 chips (pot) - 2 chips (your ante and bet) = +2 chips.
+
+- **Opponent's Card is Q:**
+  - You win. The same calculations as above apply, resulting in a +2 chips net gain.
+
+**Net Gain if You Bet (given the opponent's strategy):** 
+Since the opponent always calls, and you have the highest card (K), betting results in a guaranteed win against either J or Q. 
+Thus, average net gain = +2 chips.
+
+### If Player 1 Checks:
+Since the opponent always checks if you check:
+
+- **Showdown Occurs:**
+   - Opponent's Card is J:
+     - You win. The pot consists of only the antes (1 chip from you and 1 chip from the opponent) = 2 chips total.
+     - Your net gain = 2 chips (pot) - 1 chip (your ante) = +1 chip.
+
+   - Opponent's Card is Q:
+     - You lose. You lose your ante of 1 chip.
+
+**Expected Payoff if You Check:**
+The game proceeds to a showdown every time you check. Given the opponent could have either J or Q:
+
+- Probability of Opponent having J = 1/2
+- Probability of Opponent having Q = 1/2
+
+Expected net gain = (1/2) * (+1 chip) + (1/2) * (-1 chip) = 0 chips.
+
+### Conclusion:
+Comparing the expected payoffs:
+- **Betting leads to a +2 chips net gain.**
+- **Checking leads to an average of 0 chips net gain.**
+
+**Optimal Strategy:**
+Given that betting results in a higher payoff (always results in +2 chips regardless of the opponent's card when you have the K), the optimal move when you have the King is to bet.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Given that you are dealt a King (K), the possible cards your opponent (Player 2) can have are either a Queen (Q) or a Jack (J).
+
+### Current Pot:
+- Each player antes 1 chip, so the initial pot is 2 chips.
+
+### Opponent's Strategy with K, Q, J:
+- **King (K)**: Always bet or call.
+- **Queen (Q)**: Always check if you check; if you bet, call 1/3 of the time.
+- **Jack (J)**: Fold if you bet; bet 1/3 of the time if you check.
+
+### Player 1 (You) Strategy Options:
+1. **Check**
+2. **Bet**
+
+### Option 1: Check
+- **If Player 2 has Q**: Always checks. Showdown happens, you win since K > Q.
+- **If Player 2 has J**: Bets 1/3 of the time, checks 2/3 of the time.
+  - If Player 2 bets, you should call since K > J. Showdown happens, you win.
+  - If Player 2 checks, showdown happens, you win.
+
+### Expected Payoff if You Check:
+- Probability Player 2 has Q: 1/2
+  - You win 2 chips (2 initial + 0 additional bets).
+  - Expected gain: 1/2 * 1 = 0.5 chips.
+- Probability Player 2 has J: 1/2
+  - Bets and you call: 1/3 of 1/2 = 1/6
+    - Pot = 4 chips (2 initial + 2 from bets), you win 4 chips, net gain = 2 chips.
+    - Expected gain: 1/6 * 2 = 0.333 chips.
+  - Checks: 2/3 of 1/2 = 1/3
+    - Pot = 2 chips, you win 2 chips, net gain = 1 chip.
+    - Expected gain: 1/3 * 1 = 0.333 chips.
+  - Total expected gain from J: 0.333 + 0.333 = 0.666 chips.
+
+- Total Expected Gain if You Check: 0.5 + 0.666 = 1.166 chips.
+
+### Option 2: Bet
+- **If Player 2 has Q**: Calls 1/3 of the time; you win the showdown.
+  - Pot = 4 chips, net gain = 2 chips.
+  - Expected gain: 1/3 * 2 = 0.666 chips.
+- **If Player 2 has J**: Always folds.
+  - Pot = 3 chips, net gain = 2 chips.
+  - Expected gain = 2 chips.
+
+### Expected Payoff if You Bet:
+- Probability Player 2 has Q: 1/2
+  - Expected gain from Q: 1/2 * 0.666 = 0.333 chips.
+- Probability Player 2 has J: 1/2
+  - Expected gain from J: 1/2 * 2 = 1 chip.
+
+- Total Expected Gain if You Bet: 0.333 + 1 = 1.333 chips.
+
+### Conclusion:
+The expected payoff when you bet (1.333 chips) is higher than when you check (1.166 chips). Therefore, your optimal strategy with a King is to **bet**.  
+< Card is Q >
+    < Strategy: choose an action at random with equal probability. >
+    To determine the best move for player 1 (you), who holds a Queen (Q), let's step through the scenario step by step:
+
+### 1. Opponent's Possible Cards
+Since you have a Q, your opponent, player 2, must have either a J or a K. There are no other possibilities given the restricted deck (J, Q, K).
+
+### 2. Initial Pot Size
+Each player antes 1 chip. Therefore, the starting pot size is 2 chips.
+
+### 3. Evaluate Expected Payoff for Each Strategy
+
+#### Scenario 1: Player 1 (You) Checks
+- **If Player 2 Checks**:
+  - Showdown occurs. You win if player 2 has J; lose if player 2 has K.
+  - Probability of winning = 1/2 (since Player 2 has J or K with equal chances).
+  - Net gain if win = +1 chip (2 chips from pot - your 1 chip ante).
+  - Net gain if lose = -1 chip (you lose your ante).
+  - Expected payoff = 0.5 * (+1 chip) + 0.5 * (-1 chip) = 0 chips.
+
+- **If Player 2 Bets** (1 chip):
+  - **If You Fold**: Lose 1 chip (your ante).
+  - **If You Call**: Showdown occurs, same win/loss probabilities as above.
+    - Net gain if win = +2 chips (3 chips from pot - your ante and call).
+    - Net gain if lose = -2 chips (your ante and call).
+    - Expected payoff = 0.5 * (+2 chips) + 0.5 * (-2 chips) = 0 chips.
+  - Player 2 will bet with either card (given random equal probability strategy).
+  - Expected payoff for facing a bet = 0.5 * (-1 chip) + 0.5 * 0 chips = -0.5 chips.
+
+- **Total Expected Payoff if Player 1 Checks**:
+  - Half the time Player 2 checks = 0 chips.
+  - Half the time Player 2 bets = -0.5 chips.
+  - Combined expected payoff = 0.5 * 0 chips + 0.5 * -0.5 chips = -0.25 chips.
+
+#### Scenario 2: Player 1 (You) Bets
+- **If Player 2 Folds**: You win 3 chips (2 chips from pot + Player 2's 1 chip).
+  - Net gain = +2 chips (you recover your ante and the bet).
+- **If Player 2 Calls**: Showdown occurs with the same win/loss probabilities.
+  - Net gain if win = +3 chips (4 chips from pot - your 1 chip ante - your 1 chip bet).
+  - Net gain if lose = -2 chips (your ante and bet).
+  - Expected payoff = 0.5 * (+3 chips) + 0.5 * (-2 chips) = +0.5 chips.
+- **Total Expected Payoff if Player 1 Bets**:
+  - Half the time Player 2 folds = +2 chips.
+  - Half the time Player 2 calls = +0.5 chips.
+  - Combined expected payoff = 0.5 * +2 chips + 0.5 * +0.5 chips = +1.25 chips.
+
+### 4. Best Strategy for Player 1
+Given the calculations:
+- Checking leads to an expected payoff of -0.25 chips.
+- Betting leads to an expected payoff of +1.25 chips.
+
+**Therefore, your best move with a Queen is to bet.** This strategy gives you a higher expected payoff given the opponent's random decision-making strategy.
+    < Strategy: always call after you bet, and always check after you check. >
+    Given that your card is a Queen (Q) and you're playing against an opponent who either has a Jack (J) or a King (K), let us evaluate the outcomes of your possible strategies.
+
+### Step 1: Determine Opponent's Possible Cards
+- Your card: Queen (Q)
+- Possible opponent's cards: Jack (J) or King (K)
+
+### Step 2: Evaluate Outcomes Based on Player 1's Actions
+
+#### Scenario 1: Player 1 (You) Checks
+1. **Player 2, as per strategy, will check if you check.**
+   - Showdown:
+     - If player 2 has a Jack (J), you win with a Queen.
+     - If player 2 has a King (K), you lose with a Queen.
+   - **Expected payoff if checking:**
+     - Probability player 2 has J: 1/2 (you have Q, remaining are J and K)
+     - Probability player 2 has K: 1/2
+     - Payoff (since each player antes, pot = 2 chips):
+       - Win: Gain their 1 chip + your 1 chip = 2 chips
+       - Lose: Lose your ante of 1 chip
+
+Calculation:
+\[ \text{Expected Payoff} = (1/2 \times 2) + (1/2 \times -1) = 1 - 0.5 = 0.5 \text{ chips} \]
+
+#### Scenario 2: Player 1 (You) Bets
+1. **Player 2 calls any bet, as per strategy.**
+   - Showdown:
+     - If player 2 has a Jack (J), you win with a Queen.
+     - If player 2 has a King (K), you lose with a Queen.
+   - **Expected payoff if betting:**
+     - Probability player 2 has J: 1/2
+     - Probability player 2 has K: 1/2
+     - Payoff (each player antes and you bet additional 1 chip, so pot = 4 chips):
+       - Win: Gain their 2 chips + your 2 chips = 4 chips
+       - Lose: Lose your total contribution of 2 chips (ante + bet)
+
+Calculation:
+\[ \text{Expected Payoff} = (1/2 \times 4) + (1/2 \times -2) = 2 - 1 = 1 \text{ chip} \]
+
+### Step 3: Choose Best Strategy Based on Expected Payoff
+- **Checking**: Expected payoff = 0.5 chips
+- **Betting**: Expected payoff = 1 chip
+
+### Conclusion
+Given that the expected payoff from betting (1 chip) is higher than the expected payoff from checking (0.5 chips), your best move in this situation, with a Queen in hand and an opponent who either has a Jack or a King, is to **bet**.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Given that your card is Q, your opponent Player 2 can hold either a K or a J. Here are the steps to evaluate the expected payoffs for the possible strategies you can adopt as Player 1:
+
+**1. Opponent's Potential Cards and Associated Strategies:**
+   - If Player 2 has K: Player 2 will always bet or call.
+   - If Player 2 has J: Player 2 will fold if you bet, and either check or bet (with 1/3 probability) if you check.
+
+**2. Calculation of Expected Payoffs:**
+   a. **Player 1 checks:**
+      - If Player 2 has K:
+        - Player 2 bets, and you can fold or call.
+        - If you fold, you lose your ante of 1 chip.
+        - If you call, showdown occurs: Player 2 has K (you lose, as Q < K), losing an additional chip (total loss = 2 chips).
+      - If Player 2 has J:
+        - Player 2 bets with probability 1/3, and you can fold or call.
+          - If you fold, you lose your ante (1 chip).
+          - If you call, you win (J < Q), and gain 1+1+1=3 chips (net gain = 3 - 1 - 1 = 1 chip).
+        - Player 2 checks with probability 2/3, showdown happens: Player 1 wins (Q > J), winning 2 chips (net gain = 1 chip).
+
+      **Expected Payoff when you check**:
+      - Against K: -1 chip (100% loss if you fold or call when Player 2 bets).
+      - Against J: \( \frac{1}{3}(-1) + \frac{1}{3}(1) + \frac{2}{3}(1) = \frac{1}{3} \) chips.
+      - Overall, given equal probability of K or J: \( 0.5 \times -1 + 0.5 \times \frac{1}{3} = -\frac{1}{3} \) chips.
+
+   b. **Player 1 bets 1 chip:**
+      - If Player 2 has K:
+        - Player 2 calls, showdown occurs: Player 2 wins (K > Q), total bet 2 chips, total loss = 2 chips.
+      - If Player 2 has J:
+        - Player 2 folds, you win the total pot of 3 chips (net gain = 3 - 1 - 1 = 1 chip).
+
+      **Expected Payoff when you bet**:
+      - Against K: -2 chips
+      - Against J: +1 chip
+      - Overall, given equal probability of K or J: \( 0.5 \times -2 + 0.5 \times 1 = -0.5 \) chips.
+
+**3. Decision:**
+   Based on the expected payoffs:
+   - Checking results in an expected payoff of approximately -0.33 chips.
+   - Betting results in an expected payoff of approximately -0.5 chips.
+   
+Given these calculations, checking minimizes your expected losses compared to betting. Thus, the optimal strategy for you holding a Queen is to check.  
+< Card is J >
+    < Strategy: choose an action at random with equal probability. >
+    Given that you're dealt a Jack (J), the possible cards your opponent could be holding are either a Queen (Q) or a King (K). Here's how to analyze your possibilities:
+
+### Step 1: Opponent's Possible Cards
+- **Queen (Q)**: You would win since Jack (J) beats Queen (Q).
+- **King (K)**: You would lose since King (K) beats Jack (J).
+
+### Step 2: Calculate Expected Payoffs
+Given the opponent's strategy to choose an action at random with equal probability, we need to calculate the expected payoff for each action you could take (either check or bet). Let's break down each scenario:
+
+#### If Player 1 checks:
+- **Player 2 checks**: Showdown occurs.
+  - Probability of Player 2 holding Q = 1/2
+  - Probability of Player 2 holding K = 1/2
+  - Expected Gain = 0.5 * (Pot size if beat Q) - 0.5 * (Pot size if lose to K)
+  - Since each player antes 1 chip, pot = 2 chips. 
+  - Gain if win = 2 chips (your bet + opponent's ante), Loss if lose = 0 (no additional bet).
+  - Expected Gain = 0.5 * 2 - 0.5 * 0 = 1 chip
+
+- **Player 2 bets 1 chip**: You can fold or call.
+  - **Fold**: You lose your ante of 1 chip.
+  - **Call**: Showdown occurs.
+    - Same calculation for showdown as above.
+    - Pot size now = 4 chips (your ante + your call + opponent's ante + opponent's bet)
+    - Expected Gain if call = 0.5 * 4 - 0.5 * 0 = 2 chips
+
+  - Expected Gain if fold = -1 chip
+  - Since the opponent bets or checks with equal probability:
+    - Expected payoff if fold = -1 chip
+    - Expected payoff if call = 2 chips
+
+#### If Player 1 bets:
+- **Player 2 folds or calls**:
+  - **Folds**: You win the pot of 2 chips (each player's ante).
+  - **Calls**: Showdown occurs.
+    - Pot size = 4 chips
+    - Expected Gain at showdown = 0.5 * 4 - 0.5 * 0 = 2 chips
+
+  - Since Player 2 folds or calls with equal probability:
+    - Expected payoff if bet = 0.5 * 2 + 0.5 * 2 = 2 chips
+
+### Step 3: Evaluate the Optimal Strategy
+- **Expected Payoff if Check**: 
+  - Player 2 checks: 1 chip
+  - Player 2 bets and you call: 2 chips
+  - Overall expected = (0.5 * 1 + 0.5 * 2 = 1.5 chips)
+
+- **Expected Payoff if Bet**:
+  - Player 2 folds or calls: 2 chips
+
+### Conclusion:
+The expected payoff is higher when you bet (2 chips) compared to when you check (1.5 chips). Therefore, **the optimal move when holding a Jack is to bet**.
+    < Strategy: always call after you bet, and always check after you check. >
+    With the given scenario and rules, let's analyze the best strategy for player 1 (you), who has been dealt a Jack (J). Here are the possible scenarios:
+
+**1. Opponent's Possible Card:**
+   - Since you have a J, your opponent could either have a Q or a K. The unseen card is either the one you have or the other card not held by player 2.
+
+**2. Initial Pot Size:**
+   - Each player antes 1 chip, so the initial pot is 2 chips.
+
+**3. Your Strategies and Evaluation:**
+   - You can either check or bet 1 chip. Let's evaluate each:
+
+**a. If You Check:**
+   - Opponent's Response: According to their strategy, if you check, they will also check.
+   - Outcome: This leads to a showdown. With a J against either a Q or a K, you will lose the showdown since both Q and K are higher than J.
+   - Loss Calculation: You lose your initial ante of 1 chip, as the pot (2 chips) goes to player 2.
+
+**b. If You Bet 1 Chip:**
+   - Opponent's Response: According to their strategy, if you bet, they will call the bet.
+   - Pot Increase: The pot now becomes 4 chips (your ante, their ante, your bet, their call).
+   - Outcome: This also leads to a showdown. With a J against either a Q or a K, again, you will lose the showdown.
+   - Loss Calculation: You would have contributed 2 chips (ante + bet) to the pot and lost it all to player 2. Thus, a net loss of 2 chips.
+
+**Expected Payoff Calculation:**
+   - **Checking:** If you check, it always results in a showdown, and with your J, you will always lose against the Q or K. Therefore, your expected payoff when checking is always a loss of your ante, which is -1 chip.
+   - **Betting:** If you bet, it also results in a showdown after a call by player 2. You still lose with a J against Q or K. Therefore, by betting, you lose your ante and your bet, totaling -2 chips. 
+
+**4. Conclusion:**
+   - Since both outcomes from checking or betting when holding a J lead to a loss, your least costly strategy is to minimize your loss. The option that leads to a smaller loss (losing less money) is to check, as it results in losing only your ante of 1 chip, compared to losing both ante and bet (2 chips) when betting.
+
+**Best Strategy:**
+   - **Check.** This strategy minimizes your losses given the high probability of losing the showdown with the lowest ranking card (J) in the game.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Given your card is Jack (J), let’s consider the possible scenarios and evaluate the expected payoff for each strategy (betting or checking). Your opponent's card could either be a Queen (Q) or a King (K), as the deck only includes J, Q, and K.
+
+**Scenario 1: Opponent has a Queen (Q)**
+- If you bet:
+  - Opponent will call with probability 1/3:
+    - You lose (since Q > J) and the pot is 4 chips (your bet + opponent's ante and call). Loss = 4 - 1 (your ante) - 1 (your bet) = 2 chips.
+  - Opponent will fold with probability 2/3:
+    - You win the pot of 3 chips (your bet + opponent's ante). Gain = 3 - 1 (your ante) - 1 (your bet) = 1 chip.
+- If you check:
+  - Opponent checks:
+    - Showdown occurs, you lose since Q > J. Pot is 2 chips. Loss = 2 - 1 (your ante) = 1 chip.
+
+**Scenario 2: Opponent has a King (K)**
+- If you bet:
+  - Opponent always calls:
+    - You lose (since K > J) and the pot is 4 chips (your bet + opponent's ante and call). Loss = 4 - 1 (your ante) - 1 (your bet) = 2 chips.
+- If you check:
+  - Opponent bets:
+    - You fold:
+      - Opponent wins pot of 2 chips. You lose 1 chip (your ante).
+
+**Expected Payoff Calculation:**
+- If you bet, the opponent will fold, call or lose based on their card. To calculate:
+  - Probability opponent has Q = 1/2
+  - Probability opponent has K = 1/2
+  - Expected payoff (bet) = P(Q) * (1/3 * (-2 chips) + 2/3 * 1 chip) + P(K) * -2 chips
+  - Expected payoff (bet) = 1/2 * (1/3 * (-2) + 2/3 * 1) + 1/2 * (-2)
+  - Expected payoff (bet) = 1/2 * (-2/3 + 2/3) + 1/2 * -2
+  - Expected payoff (bet) = 1/2 * 0 - 1 = -1
+
+- If you check:
+  - Expected payoff (check) = P(Q) * (-1 chip) + P(K) * (-1 chip)
+  - Expected payoff (check) = 1/2 * (-1) + 1/2 * (-1)
+  - Expected payoff (check) = -1 chip
+
+**Conclusion:**
+Both betting and checking yield an expected loss of 1 chip when you have a J and your opponent plays optimally as described. However, betting involves scenarios where you might lose 2 chips, or alternatively gain 1 chip occasionally, whereas checking consistently involves smaller, more predictable losses. Given the risk and returns, checking is a more conservative approach, ensuring consistent losses without risking larger ones. Hence, it's better to check with a J, minimizing potential losses.
+===============
+Testing model gpt-4o @ temp = 0.2  
+< Card is K >
+    < Strategy: choose an action at random with equal probability. >
+    Let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+- The deck consists of a Jack (J), a Queen (Q), and a King (K).
+- You have the King (K).
+- Therefore, Player 2 could have either the Jack (J) or the Queen (Q).
+
+### Step 2: Initial Pot Size
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Player 1's Options
+#### Option 1: Check
+- If you check, Player 2 can either check or bet.
+  - **If Player 2 checks:** 
+    - A showdown occurs.
+    - You win against both J and Q, so you win the pot of 2 chips.
+    - Net gain: +1 chip (since you initially contributed 1 chip).
+  - **If Player 2 bets:**
+    - You can fold or call.
+    - **If you fold:** 
+      - You lose your initial 1 chip.
+      - Net loss: -1 chip.
+    - **If you call:** 
+      - A showdown occurs.
+      - You win against both J and Q, so you win the pot of 4 chips (2 initial + 1 bet from each player).
+      - Net gain: +2 chips (4 chips - 2 chips contributed).
+
+#### Option 2: Bet
+- If you bet, Player 2 can either fold or call.
+  - **If Player 2 folds:** 
+    - You win the pot of 2 chips.
+    - Net gain: +1 chip.
+  - **If Player 2 calls:** 
+    - A showdown occurs.
+    - You win against both J and Q, so you win the pot of 4 chips.
+    - Net gain: +2 chips.
+
+### Step 4: Calculate Expected Payoff
+- Since Player 2 chooses actions randomly with equal probability, each action (check, bet, fold, call) has a probability of 0.5 when applicable.
+
+#### Expected Payoff for Checking:
+- Probability of Player 2 checking: 0.5
+  - Payoff: +1 chip
+- Probability of Player 2 betting: 0.5
+  - Probability of folding: 0.5
+    - Payoff: -1 chip
+  - Probability of calling: 0.5
+    - Payoff: +2 chips
+
+Expected Payoff for Checking:
+\[ 
+= 0.5 \times 1 + 0.5 \times (0.5 \times (-1) + 0.5 \times 2) 
+= 0.5 + 0.5 \times (0.5 \times (-1) + 0.5 \times 2) 
+= 0.5 + 0.5 \times (0.5 \times 1) 
+= 0.5 + 0.25 
+= 0.75 \text{ chips}
+\]
+
+#### Expected Payoff for Betting:
+- Probability of Player 2 folding: 0.5
+  - Payoff: +1 chip
+- Probability of Player 2 calling: 0.5
+  - Payoff: +2 chips
+
+Expected Payoff for Betting:
+\[ 
+= 0.5 \times 1 + 0.5 \times 2 
+= 0.5 + 1 
+= 1.5 \text{ chips}
+\]
+
+### Conclusion
+The expected payoff for betting (1.5 chips) is higher than for checking (0.75 chips). Therefore, the optimal strategy for Player 1 is to bet.
+    < Strategy: always call after you bet, and always check after you check. >
+    Let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+Since you have the King (K), the possible cards for Player 2 are either the Jack (J) or the Queen (Q). The unseen card is the one not dealt, which could be either J or Q, depending on what Player 2 has.
+
+### Step 2: Pot Size and Contributions
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Player 1's Strategies
+You have two main strategies to consider: checking or betting.
+
+#### Strategy 1: Check
+- If you check, Player 2 will also check (according to their strategy), leading to a showdown.
+- Possible outcomes:
+  - If Player 2 has J, you win since K > J.
+  - If Player 2 has Q, you win since K > Q.
+- In both cases, you win the pot of 2 chips. Your net gain is 1 chip (since you initially contributed 1 chip as an ante).
+
+#### Strategy 2: Bet
+- If you bet 1 chip, Player 2 will always call (according to their strategy).
+- The pot size becomes 4 chips (2 chips from antes + 1 chip bet by you + 1 chip call by Player 2).
+- Possible outcomes:
+  - If Player 2 has J, you win since K > J.
+  - If Player 2 has Q, you win since K > Q.
+- In both cases, you win the pot of 4 chips. Your net gain is 2 chips (since you initially contributed 1 chip as an ante and 1 chip as a bet).
+
+### Step 4: Expected Payoff
+- **Checking**: You win 1 chip.
+- **Betting**: You win 2 chips.
+
+### Conclusion
+Given that you have the highest possible card (K) and your opponent will always call if you bet, the optimal strategy is to bet. This maximizes your expected payoff, allowing you to win 2 chips instead of 1. Therefore, your move should be to bet 1 chip.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+Since you have a King (K), the possible cards for player 2 are either a Queen (Q) or a Jack (J). The third card, which is not dealt, is left unseen.
+
+### Step 2: Initial Pot Size
+- Both players ante 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Player 1's Strategies
+
+#### Strategy 1: Check
+- If you check, player 2's response depends on their card:
+  - **If player 2 has a Q:** They will check, leading to a showdown.
+  - **If player 2 has a J:** They will bet with a probability of 1/3. If they bet, you can either fold or call.
+    - If you fold, you lose your ante (1 chip).
+    - If you call, the pot becomes 4 chips (2 antes + 1 bet + 1 call), and you win since K > J.
+
+**Expected Payoff for Checking:**
+- Probability player 2 has Q = 1/2
+  - Showdown: You win 2 chips (pot size) with K > Q.
+- Probability player 2 has J = 1/2
+  - Probability they bet = 1/3
+    - If you call, you win 4 chips (pot size) with K > J.
+    - If you fold, you lose 1 chip (your ante).
+  - Probability they check = 2/3
+    - Showdown: You win 2 chips (pot size) with K > J.
+
+Expected payoff = (1/2) * 2 + (1/2) * [(1/3) * 4 + (2/3) * 2] = 1 + (1/2) * [(4/3) + (4/3)] = 1 + (1/2) * (8/3) = 1 + 4/3 = 7/3 ≈ 2.33 chips.
+
+#### Strategy 2: Bet
+- If you bet, player 2's response depends on their card:
+  - **If player 2 has a Q:** They will call with a probability of 1/3.
+    - If they call, the pot becomes 4 chips, and you win since K > Q.
+    - If they fold, you win 3 chips (2 antes + 1 bet).
+  - **If player 2 has a J:** They will always fold, and you win 3 chips (2 antes + 1 bet).
+
+**Expected Payoff for Betting:**
+- Probability player 2 has Q = 1/2
+  - Probability they call = 1/3
+    - You win 4 chips.
+  - Probability they fold = 2/3
+    - You win 3 chips.
+- Probability player 2 has J = 1/2
+  - They always fold.
+  - You win 3 chips.
+
+Expected payoff = (1/2) * [(1/3) * 4 + (2/3) * 3] + (1/2) * 3 = (1/2) * [(4/3) + 2] + 1.5 = (1/2) * (10/3) + 1.5 = 5/3 + 1.5 = 5/3 + 3/2 = 10/6 + 9/6 = 19/6 ≈ 3.17 chips.
+
+### Conclusion
+The expected payoff for betting (3.17 chips) is higher than the expected payoff for checking (2.33 chips). Therefore, the optimal move is to bet.  
+< Card is Q >
+    < Strategy: choose an action at random with equal probability. >
+    To determine the best move, let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+- The deck consists of a Jack (J), a Queen (Q), and a King (K).
+- You have the Queen (Q).
+- Therefore, Player 2 could have either the Jack (J) or the King (K).
+
+### Step 2: Determine the Pot Size
+- Both players have anted 1 chip, so the pot initially contains 2 chips.
+
+### Step 3: Evaluate Possible Outcomes
+#### If Player 1 Checks:
+- **Player 2 Checks:**
+  - A showdown occurs.
+  - Possible outcomes:
+    - If Player 2 has J, you win (Q beats J).
+    - If Player 2 has K, you lose (K beats Q).
+  - Pot remains 2 chips. No additional chips are bet.
+
+- **Player 2 Bets:**
+  - You can either fold or call.
+  - If you fold, you lose your ante of 1 chip.
+  - If you call, the pot becomes 4 chips (2 chips each).
+    - Possible outcomes:
+      - If Player 2 has J, you win the pot of 4 chips.
+      - If Player 2 has K, you lose your additional bet, totaling a loss of 2 chips.
+
+#### If Player 1 Bets:
+- **Player 2 Folds:**
+  - You win the pot of 2 chips.
+
+- **Player 2 Calls:**
+  - The pot becomes 4 chips (2 chips each).
+  - Possible outcomes:
+    - If Player 2 has J, you win the pot of 4 chips.
+    - If Player 2 has K, you lose your additional bet, totaling a loss of 2 chips.
+
+### Step 4: Calculate Expected Payoffs
+- **If You Check:**
+  - Probability Player 2 has J = 1/2
+  - Probability Player 2 has K = 1/2
+  - Expected payoff if Player 2 checks: (1/2 * 1) + (1/2 * -1) = 0
+  - Expected payoff if Player 2 bets and you call: (1/2 * 2) + (1/2 * -2) = 0
+  - Overall expected payoff if you check: 0
+
+- **If You Bet:**
+  - Probability Player 2 folds = 1/2
+  - Probability Player 2 calls = 1/2
+  - Expected payoff if Player 2 folds: 1
+  - Expected payoff if Player 2 calls: (1/2 * 2) + (1/2 * -2) = 0
+  - Overall expected payoff if you bet: (1/2 * 1) + (1/2 * 0) = 0.5
+
+### Conclusion
+Given the opponent's random strategy and the expected payoffs calculated, the optimal move for Player 1 is to **bet**. This strategy maximizes your expected payoff, as betting gives you a positive expected value of 0.5 chips compared to checking, which has an expected value of 0.
+    < Strategy: always call after you bet, and always check after you check. >
+    To determine the best move, let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+- The deck consists of a Jack (J), a Queen (Q), and a King (K).
+- Player 1 has a Queen (Q).
+- Therefore, Player 2 could have either a Jack (J) or a King (K).
+
+### Step 2: Pot Size and Contributions
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Possible Outcomes
+#### If Player 1 Checks:
+- Player 2 will always check (according to their strategy).
+- A showdown occurs:
+  - If Player 2 has a Jack (J), Player 1 wins (Q beats J).
+  - If Player 2 has a King (K), Player 2 wins (K beats Q).
+
+#### If Player 1 Bets:
+- Player 2 will always call (according to their strategy).
+- The pot size becomes 4 chips (2 chips from antes + 1 chip bet by Player 1 + 1 chip call by Player 2).
+- A showdown occurs:
+  - If Player 2 has a Jack (J), Player 1 wins and gains 2 chips (net gain: 2 chips).
+  - If Player 2 has a King (K), Player 1 loses and loses 2 chips (net loss: 2 chips).
+
+### Step 4: Calculate Expected Payoffs
+#### Probability of Player 2's Card:
+- There are two possible cards for Player 2: J or K.
+- Assuming each card is equally likely, the probability of Player 2 having J is 0.5, and the probability of having K is 0.5.
+
+#### Expected Payoff for Checking:
+- If Player 2 has J, Player 1 wins 1 chip (net gain: 1 chip).
+- If Player 2 has K, Player 1 loses 1 chip (net loss: 1 chip).
+- Expected payoff = (0.5 * 1) + (0.5 * -1) = 0.
+
+#### Expected Payoff for Betting:
+- If Player 2 has J, Player 1 wins 2 chips (net gain: 2 chips).
+- If Player 2 has K, Player 1 loses 2 chips (net loss: 2 chips).
+- Expected payoff = (0.5 * 2) + (0.5 * -2) = 0.
+
+### Conclusion
+Both checking and betting result in an expected payoff of 0. However, betting might be slightly more advantageous because it puts pressure on Player 2 and could potentially lead to a mistake if Player 2 deviates from their strategy. Given the opponent's strategy, either move is statistically neutral, but betting can sometimes be a more aggressive and psychologically advantageous play. Therefore, Player 1 should bet.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    To determine the best move, let's analyze the situation step by step:
+
+### Step 1: Possible Cards for Player 2
+Since you have a Queen (Q), the possible cards for Player 2 are either a Jack (J) or a King (K).
+
+### Step 2: Pot Size
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Strategies
+
+#### Strategy 1: Check
+- **Opponent has a King (K):** 
+  - Player 2 will bet (since they always bet with a K).
+  - You would then have to decide whether to fold or call. If you call, you lose 1 chip (since K beats Q).
+- **Opponent has a Queen (Q):** 
+  - Player 2 will check (since they always check with a Q after you check).
+  - The showdown occurs, resulting in a tie, and you split the pot. No net gain or loss.
+- **Opponent has a Jack (J):**
+  - Player 2 will bet with a probability of 1/3.
+  - If Player 2 bets, you can call and win 1 chip (since Q beats J).
+  - If Player 2 checks (2/3 probability), the showdown occurs, and you win 1 chip.
+
+**Expected Payoff for Checking:**
+- Probability opponent has K: 1/3
+  - Expected loss = (1/3) * (-1) = -1/3
+- Probability opponent has Q: 0 (since you have Q)
+- Probability opponent has J: 1/3
+  - Expected gain = (1/3) * [(1/3 * 1) + (2/3 * 1)] = (1/3) * 1 = 1/3
+
+Total expected payoff for checking = -1/3 + 1/3 = 0
+
+#### Strategy 2: Bet
+- **Opponent has a King (K):**
+  - Player 2 will call, and you lose 1 chip (since K beats Q).
+- **Opponent has a Queen (Q):**
+  - Player 2 will call with a probability of 1/3.
+  - If Player 2 calls, the showdown results in a tie, and you split the pot. No net gain or loss.
+  - If Player 2 folds (2/3 probability), you win 1 chip.
+- **Opponent has a Jack (J):**
+  - Player 2 will fold, and you win 1 chip.
+
+**Expected Payoff for Betting:**
+- Probability opponent has K: 1/3
+  - Expected loss = (1/3) * (-1) = -1/3
+- Probability opponent has Q: 0 (since you have Q)
+- Probability opponent has J: 1/3
+  - Expected gain = (1/3) * 1 = 1/3
+
+Total expected payoff for betting = -1/3 + 1/3 = 0
+
+### Conclusion
+Both strategies (checking and betting) result in an expected payoff of 0. However, betting might be slightly more advantageous because it can potentially lead to a fold from a J or a Q, giving you a chance to win the pot outright without a showdown. Therefore, the optimal move is to **bet**.  
+< Card is J >
+    < Strategy: choose an action at random with equal probability. >
+    To decide on the best move, let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+- The deck consists of a Jack (J), a Queen (Q), and a King (K).
+- You have a Jack (J).
+- Therefore, Player 2 could have either a Queen (Q) or a King (K).
+
+### Step 2: Pot Size and Contributions
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Possible Outcomes and Payoffs
+
+#### If Player 1 Checks:
+- **Player 2 Checks:** 
+  - A showdown occurs.
+  - If Player 2 has a Q, you win (net gain of 1 chip).
+  - If Player 2 has a K, you lose (net loss of 1 chip).
+
+- **Player 2 Bets:**
+  - If Player 1 Folds: 
+    - You lose your ante (net loss of 1 chip).
+  - If Player 1 Calls:
+    - A showdown occurs.
+    - If Player 2 has a Q, you win (net gain of 2 chips).
+    - If Player 2 has a K, you lose (net loss of 2 chips).
+
+#### If Player 1 Bets:
+- **Player 2 Folds:**
+  - You win the pot (net gain of 1 chip).
+
+- **Player 2 Calls:**
+  - A showdown occurs.
+  - If Player 2 has a Q, you win (net gain of 2 chips).
+  - If Player 2 has a K, you lose (net loss of 2 chips).
+
+### Step 4: Calculate Expected Payoffs
+
+#### Expected Payoff if Player 1 Checks:
+- Probability Player 2 has Q = 1/2, Probability Player 2 has K = 1/2.
+- If Player 2 checks:
+  - Expected payoff = (1/2 * 1) + (1/2 * -1) = 0.
+- If Player 2 bets and you fold:
+  - Expected payoff = -1.
+- If Player 2 bets and you call:
+  - Expected payoff = (1/2 * 2) + (1/2 * -2) = 0.
+
+#### Expected Payoff if Player 1 Bets:
+- Probability Player 2 has Q = 1/2, Probability Player 2 has K = 1/2.
+- If Player 2 folds:
+  - Expected payoff = 1.
+- If Player 2 calls:
+  - Expected payoff = (1/2 * 2) + (1/2 * -2) = 0.
+
+### Step 5: Decision
+- If you check, the expected payoff is 0 if Player 2 checks or if you call a bet.
+- If you bet, the expected payoff is 1 if Player 2 folds and 0 if Player 2 calls.
+
+Given that betting has a chance of yielding a positive expected payoff (if Player 2 folds), while checking does not, the optimal strategy is to **bet 1 chip**.
+    < Strategy: always call after you bet, and always check after you check. >
+    To decide on the best move, let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+- The deck consists of a Jack (J), a Queen (Q), and a King (K).
+- You have the Jack (J).
+- Therefore, Player 2 could have either the Queen (Q) or the King (K).
+
+### Step 2: Pot Size and Contributions
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Strategies
+
+#### Strategy 1: Check
+- If you check, Player 2 will also check (according to their strategy).
+- A showdown occurs:
+  - If Player 2 has the Queen (Q), you win with your Jack (J).
+  - If Player 2 has the King (K), you lose.
+
+**Expected Payoff for Checking:**
+- Probability of Player 2 having Q = 1/2
+- Probability of Player 2 having K = 1/2
+- Payoff if Player 2 has Q = +1 chip (you win the pot of 2 chips, net gain of 1 chip since you contributed 1 chip)
+- Payoff if Player 2 has K = -1 chip (you lose your 1 chip contribution)
+
+Expected payoff = (1/2 * 1) + (1/2 * -1) = 0
+
+#### Strategy 2: Bet
+- If you bet 1 chip, Player 2 will always call (according to their strategy).
+- A showdown occurs:
+  - If Player 2 has the Queen (Q), you win.
+  - If Player 2 has the King (K), you lose.
+
+**Expected Payoff for Betting:**
+- Probability of Player 2 having Q = 1/2
+- Probability of Player 2 having K = 1/2
+- Payoff if Player 2 has Q = +2 chips (you win the pot of 4 chips, net gain of 2 chips since you contributed 2 chips)
+- Payoff if Player 2 has K = -2 chips (you lose your 2 chip contribution)
+
+Expected payoff = (1/2 * 2) + (1/2 * -2) = 0
+
+### Conclusion
+Both strategies (checking and betting) result in an expected payoff of 0. Since neither strategy provides a better expected payoff, you can choose either strategy without affecting your expected outcome. However, betting might be seen as more aggressive and could potentially influence future rounds if the opponent's strategy were to change. In this single round, though, the expected payoff remains the same.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    To determine the best move, let's analyze the situation step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+Since the deck consists of a Jack (J), Queen (Q), and King (K), and you have a Jack, the possible cards for Player 2 are either a Queen or a King.
+
+### Step 2: Initial Pot Size
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Player 1's Options
+You have two options: check or bet.
+
+#### Option 1: Check
+- If you check, Player 2 can either check or bet.
+  - **Player 2 checks**: This happens if Player 2 has a Queen (Q) since they always check with a Q after you check. The pot remains 2 chips, and a showdown occurs. You lose because Q beats J.
+  - **Player 2 bets**: This happens if Player 2 has a King (K) (always bets) or a Jack (J) (bets with a 1/3 probability). 
+    - If Player 2 has a K, they will bet 1 chip. You should fold because you cannot win against a K, resulting in a net loss of 1 chip (your ante).
+    - If Player 2 has a J, they bet with a 1/3 probability. You should call, leading to a showdown where you tie, and the pot is split. However, this scenario is impossible since you have the J.
+
+#### Option 2: Bet
+- If you bet 1 chip, Player 2 can either fold or call.
+  - **Player 2 folds**: This happens if Player 2 has a Jack (J), but since you have the J, this scenario is impossible.
+  - **Player 2 calls**: 
+    - If Player 2 has a King (K), they will always call. You lose, resulting in a net loss of 2 chips (1 chip ante + 1 chip bet).
+    - If Player 2 has a Queen (Q), they call with a 1/3 probability. In this case, you lose, resulting in a net loss of 2 chips.
+
+### Step 4: Calculate Expected Payoff
+- **Checking**: 
+  - If Player 2 has a Q (1/2 probability), they check, and you lose 1 chip.
+  - If Player 2 has a K (1/2 probability), they bet, and you fold, losing 1 chip.
+  - Expected payoff = (1/2 * -1) + (1/2 * -1) = -1 chip.
+
+- **Betting**:
+  - If Player 2 has a K (1/2 probability), they call, and you lose 2 chips.
+  - If Player 2 has a Q (1/2 probability), they call with a 1/3 probability, and you lose 2 chips.
+  - Expected payoff = (1/2 * -2) + (1/2 * 1/3 * -2) = -1 - 1/3 = -4/3 chips.
+
+### Conclusion
+Checking results in a lower expected loss (-1 chip) compared to betting (-4/3 chips). Therefore, the optimal move is to **check**.
+===============
+Testing model gpt-4o @ temp = 0.8  
+< Card is K >
+    < Strategy: choose an action at random with equal probability. >
+    Let's analyze the situation step by step:
+
+### Step 1: Determine Possible Opponent Cards
+You are holding a King (K). The remaining unseen cards are a Jack (J) and a Queen (Q). Since each player is dealt a unique card, your opponent could be holding either a J or a Q. 
+
+### Step 2: Initial Pot Size
+Each player antes 1 chip, so the pot starts with 2 chips.
+
+### Step 3: Evaluate Possible Actions and Outcomes
+Player 1 (you) can either check or bet. Let's evaluate each option:
+
+#### Option A: You Check
+- **Player 2 Checks**: 
+  - A showdown occurs, and you win if Player 2 has a J or a Q (you always win since K > Q and K > J).
+  - **Net Gain**: You win the 2-chip pot. Your net gain is 1 chip (2 chips won - 1 chip ante).
+
+- **Player 2 Bets**: 
+  - You can either fold or call.
+  - **If You Fold**: You lose your 1 chip ante.
+  - **If You Call**: 
+    - A showdown occurs, and you win since your K beats both J and Q.
+    - The pot is now 4 chips (2 original + 1 bet from each player).
+    - **Net Gain**: You win the 4-chip pot. Your net gain is 2 chips (4 chips won - 2 chips total contribution).
+
+#### Option B: You Bet
+- **Player 2 Folds**:
+  - You win the 2-chip pot outright (1 chip net gain).
+  
+- **Player 2 Calls**:
+  - A showdown occurs, and you win since your K beats both J and Q.
+  - The pot is now 4 chips.
+  - **Net Gain**: You win the 4-chip pot. Your net gain is 2 chips (4 chips won - 2 chips total contribution).
+
+### Step 4: Expected Payoff Calculation
+Your opponent chooses their actions randomly with equal probability.
+
+#### If You Check:
+- **Player 2 Checks**: Probability = 1/2
+  - Net Gain = 1 chip
+- **Player 2 Bets**: Probability = 1/2
+  - If you Fold: Net Gain = -1 chip
+  - If you Call: Net Gain = 2 chips
+
+Since calling against a random opponent is always better with a winning hand, choose to call:
+- Expected Gain with Check = (1/2 * 1) + (1/2 * 2) = 0.5 + 1 = 1.5 chips
+
+#### If You Bet:
+- **Player 2 Folds**: Probability = 1/2
+  - Net Gain = 1 chip
+- **Player 2 Calls**: Probability = 1/2
+  - Net Gain = 2 chips
+
+- Expected Gain with Bet = (1/2 * 1) + (1/2 * 2) = 0.5 + 1 = 1.5 chips
+
+### Conclusion
+Both checking and betting have the same expected payoff of 1.5 chips. However, betting is slightly more favorable because it directly pressures the opponent to make a decision and eliminates the possibility of losing a chip if they bet after a check. Therefore, the best strategic move is to **bet 1 chip**.
+    < Strategy: always call after you bet, and always check after you check. >
+    Let's evaluate the situation step by step based on the given information:
+
+### Step 1: Determine possible cards for your opponent
+- You have the King (K).
+- The deck consists of a Jack (J), Queen (Q), and King (K).
+- Since you have the King, your opponent can have either the Jack (J) or the Queen (Q).
+- The third card is left unseen and doesn't directly affect the current round.
+
+### Step 2: Determine the pot size
+- Each player antes 1 chip, so the initial pot is 2 chips.
+
+### Step 3: Evaluate strategies and potential outcomes
+
+#### Strategy 1: Check
+- If you check, based on the opponent's strategy, they will also check.
+- A showdown will occur:
+  - If opponent has J, your K wins.
+  - If opponent has Q, your K wins.
+- In either case, you win the pot of 2 chips.
+- **Net Gain**: You win 1 chip (since you contributed 1 chip as ante).
+
+#### Strategy 2: Bet 1 chip
+- If you bet, based on the opponent's strategy, they will always call.
+- The pot is now 4 chips (2 chips initial pot + 1 chip from your bet + 1 chip from their call).
+- A showdown will occur:
+  - If opponent has J, your K wins.
+  - If opponent has Q, your K wins.
+- In either case, you win the pot of 4 chips.
+- **Net Gain**: You win 2 chips (4 chips pot - 2 chips contributed by you).
+
+### Step 4: Evaluate the expected payoff
+- **Checking** results in a net gain of 1 chip.
+- **Betting** results in a net gain of 2 chips.
+
+### Conclusion
+Given that your opponent will always call if you bet and will check if you check, and because you have the highest possible card (King), betting maximizes your gain. Therefore, the optimal move is to **bet 1 chip**. This will result in a higher expected payoff of 2 chips net gain compared to checking.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    To determine the best move in this situation, let's analyze the possible scenarios step by step:
+
+### Step 1: Opponent's Possible Cards
+Given that you have a King (K), the opponent could only have either a Queen (Q) or a Jack (J). The card that is not dealt is left unseen.
+
+### Step 2: Pot Size
+- Both players start by anteing 1 chip each, so the pot initially contains 2 chips.
+
+### Step 3: Consider Possible Strategies
+
+#### Strategy A: Check
+- **Opponent has Q:**
+  - According to the opponent's strategy, they will check if you check, leading to a showdown.
+  - In a showdown, K beats Q, so you win the pot of 2 chips.
+- **Opponent has J:**
+  - The opponent bets with a probability of 1/3 after you check.
+  - If the opponent bets, you can either call or fold:
+    - If you call, a showdown occurs, and K beats J. You win the pot of 4 chips (2 chips initially + 1 chip from opponent + 1 chip from your call).
+    - If you fold, you lose your ante of 1 chip, and the opponent wins the pot of 3 chips.
+  - If the opponent does not bet (with a probability of 2/3), a showdown occurs, and you win as K beats J. You win the pot of 2 chips.
+
+#### Strategy B: Bet
+- **Opponent has Q:**
+  - The opponent calls with a probability of 1/3.
+    - If the opponent calls, a showdown occurs, and K beats Q. You win the pot of 4 chips.
+  - If the opponent folds (probability 2/3), you win the pot of 3 chips outright.
+- **Opponent has J:**
+  - The opponent always folds if you bet. You win the pot of 3 chips outright.
+
+### Step 4: Calculate Expected Payoffs
+
+#### Check Strategy Expected Payoff
+- **Against Q:**
+  - Win 2 chips (100% probability).
+- **Against J:**
+  - Opponent bets (1/3 probability):
+    - If you call, win 4 chips (100% probability).
+    - If you fold, lose 1 chip.
+  - Opponent checks (2/3 probability):
+    - Win 2 chips.
+
+Expected payoff against J when opponent bets:
+- Call: (1/3) * 4 = 4/3 chips
+- Fold: (1/3) * (-1) = -1/3 chips
+
+Overall expected payoff against J:
+- (1/3)*(4/3) + (1/3)*(-1/3) + (2/3)*2 = 2 + 4/9 - 1/9 = 2 + 1/3 = 7/3 ≈ 2.33 chips
+
+#### Bet Strategy Expected Payoff
+- **Against Q:**
+  - Opponent calls (1/3 probability): Win 4 chips.
+  - Opponent folds (2/3 probability): Win 3 chips.
+- **Against J:**
+  - Opponent folds: Win 3 chips.
+
+Expected payoff against Q:
+- (1/3) * 4 + (2/3) * 3 = 4/3 + 6/3 = 10/3 ≈ 3.33 chips
+
+### Conclusion
+- **Check Strategy:** Expected payoff ≈ 2.67 chips
+- **Bet Strategy:** Expected payoff ≈ 3.33 chips
+
+Given the expected payoffs, **betting** is the better strategy. By betting, you maximize your expected gain, particularly due to the opponent folding with a J and the possibility of them folding or reluctantly calling with a Q.  
+< Card is Q >
+    < Strategy: choose an action at random with equal probability. >
+    To decide the best course of action, let's analyze the possible situations in the game:
+
+### Possible Opponent Cards
+You have been dealt a Queen (Q). The remaining cards are a Jack (J) and a King (K). Therefore, your opponent (Player 2) could either have:
+- A Jack (J)
+- A King (K)
+
+### Pot Size
+- Both players ante 1 chip, so the initial pot is 2 chips.
+
+### Strategy Evaluation
+
+**1. Checking:**
+
+- **If Player 2 Checks**: 
+  - Showdown occurs.
+  - Outcomes:
+    - If Player 2 has J: You win (Q beats J).
+    - If Player 2 has K: You lose (K beats Q).
+  - Probability of J: 1/2, Probability of K: 1/2.
+  - Expected Value (EV) of checking:
+    \[
+    EV(\text{check}) = \frac{1}{2} \times 1 + \frac{1}{2} \times (-1) = 0
+    \]
+
+- **If Player 2 Bets**:
+  - You can either fold or call.
+  - **Folding**: You lose your ante of 1 chip.
+  - **Calling**: Showdown occurs.
+    - Outcomes:
+      - If Player 2 has J: You win 2 chips.
+      - If Player 2 has K: You lose 2 chips.
+    - Expected Value (EV) of calling:
+    \[
+    EV(\text{call}) = \frac{1}{2} \times 2 + \frac{1}{2} \times (-2) = 0
+    \]
+  - Best response to a bet: Since the EV of calling is 0, you should not fold if Player 2 bets.
+
+**2. Betting:**
+- If you bet 1 chip, the pot becomes 3 chips (2 initial + 1 bet).
+- Player 2 can either fold or call.
+  - **If Player 2 Folds**: You win the entire pot of 3 chips.
+  - **If Player 2 Calls**: Showdown occurs.
+    - Outcomes:
+      - If Player 2 has J: You win 3 chips.
+      - If Player 2 has K: You lose 3 chips.
+  - Probability Player 2 folds: 1/2, Probability Player 2 calls: 1/2.
+  - Expected Value (EV) of betting:
+  \[
+  EV(\text{bet}) = \frac{1}{2} \times 3 + \frac{1}{2} \left(\frac{1}{2} \times 3 + \frac{1}{2} \times (-3)\right) = \frac{3}{2} + 0 = \frac{3}{2} = 1.5
+  \]
+
+### Conclusion
+Given these calculations, the best strategy for Player 1 is to bet. This maximizes your expected payoff compared to checking, as it allows the possibility of immediately winning the pot if Player 2 folds and has a higher expected value.
+    < Strategy: always call after you bet, and always check after you check. >
+    To make an informed decision in this Poker game, let's break down the situation step by step:
+
+### Step 1: Identify Possible Opponent's Cards
+Given the deck consists of a Jack (J), a Queen (Q), and a King (K), and you have the Queen (Q), the possible cards for your opponent are either:
+- Jack (J)
+- King (K)
+
+### Step 2: Determine Pot Size and Contributions
+- Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate the Expected Payoff for Each Strategy
+
+#### Strategy 1: Check
+- If you check, according to the opponent's strategy, they will also check.
+- This leads directly to a showdown.
+
+**Showdown Outcomes:**
+- If opponent has J, you win (Q beats J).
+- If opponent has K, you lose (K beats Q).
+
+**Probability of Outcomes:**
+- Probability your opponent has J: 1/2
+- Probability your opponent has K: 1/2
+
+**Expected Payoff:**
+- Winning against J: Gain 1 chip (2 chips in pot - 1 chip you contributed).
+- Losing against K: Lose 1 chip (0 chips from pot - 1 chip you contributed).
+
+Expected payoff if you check:
+\[ \text{Expected Payoff} = \left(\frac{1}{2} \times 1\right) + \left(\frac{1}{2} \times (-1)\right) = 0 \]
+
+#### Strategy 2: Bet
+- If you bet 1 chip, the opponent will always call, according to their strategy.
+- This leads to a showdown after you each put an additional chip into the pot.
+
+**Pot Size After Betting:**
+- Initial pot: 2 chips
+- Additional chips from bet and call: 2 chips
+- Total pot size: 4 chips
+
+**Showdown Outcomes:**
+- If opponent has J, you win the pot (4 chips).
+- If opponent has K, you lose your additional chip (2 chips total loss).
+
+**Expected Payoff:**
+- Winning against J: Gain 2 chips (4 chips in pot - 2 chips you contributed).
+- Losing against K: Lose 2 chips (0 chips from pot - 2 chips you contributed).
+
+Expected payoff if you bet:
+\[ \text{Expected Payoff} = \left(\frac{1}{2} \times 2\right) + \left(\frac{1}{2} \times (-2)\right) = 0 \]
+
+### Decision
+Both strategies (checking and betting) yield an expected payoff of 0. However, betting increases the variance, as you could either win or lose more chips compared to checking, which is less risky with the same expected outcome.
+
+Given the opponent’s strategy, and since both options have the same expected payoff, you might prefer checking to avoid the additional risk of losing more chips, unless you're comfortable with the increased variance from betting.
+
+**Recommended Move:** Check
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    To decide the best move, let's carefully consider each possible scenario:
+
+1. **Determine Opponent's Possible Cards:**
+   - You have a Queen (Q).
+   - The remaining cards are Jack (J) and King (K).
+   - Thus, your opponent could either have a J or a K.
+
+2. **Initial Pot Size:**
+   - Each player antes 1 chip, so the pot starts with 2 chips.
+
+3. **Evaluate Player 1's Strategies:**
+
+   **Strategy 1: Check**
+
+   - If you check and your opponent has a K:
+     - Your opponent will bet 1 chip.
+     - You will fold (since K beats Q), and you lose 1 chip (your ante).
+
+   - If you check and your opponent has a J:
+     - Your opponent will bet 1/3 of the time (since their strategy with a J is to bet with 1/3 probability).
+     - If they bet, you fold and lose 1 chip (your ante) for that 1/3 probability.
+     - 2/3 of the time, your opponent will check, leading to a showdown, and you win 1 chip (the pot size of 2 minus your ante).
+
+   - Expected payoff when you check:
+     - Probability Opponent has K = 0.5, Expected payoff = -1 chip (since you fold).
+     - Probability Opponent has J = 0.5, Expected payoff = (1/3 * -1 chip) + (2/3 * 1 chip) = (-1/3 + 2/3) = 1/3 chip.
+     - Total expected payoff = (0.5 * -1) + (0.5 * 1/3) = -0.5 + 0.1667 = -0.3333 chips.
+
+   **Strategy 2: Bet**
+
+   - If you bet and your opponent has a K:
+     - They will call (since they always call with a K).
+     - You lose 1 chip (as K beats Q).
+
+   - If you bet and your opponent has a J:
+     - They will fold (since they always fold with a J when you bet).
+     - You win 1 chip (the pot contains 3 chips, your 1 ante and 1 bet and your opponent's ante).
+
+   - Expected payoff when you bet:
+     - Probability Opponent has K = 0.5, Expected payoff = -1 chip.
+     - Probability Opponent has J = 0.5, Expected payoff = 1 chip.
+     - Total expected payoff = (0.5 * -1) + (0.5 * 1) = -0.5 + 0.5 = 0 chips.
+
+4. **Conclusion:**
+   - The expected payoff for checking is -0.3333 chips.
+   - The expected payoff for betting is 0 chips.
+
+Given these calculations, the best strategy for you is to **bet**. This maximizes your expected payoff to 0 chips, which is better than the expected loss of -0.3333 chips from checking.  
+< Card is J >
+    < Strategy: choose an action at random with equal probability. >
+    Let's analyze the situation step by step:
+
+### Step 1: Determine Possible Opponent Cards
+You have a Jack (J). The possible cards for your opponent are either a Queen (Q) or a King (K). The card that is not dealt is either the Q or the K, depending on what your opponent holds.
+
+### Step 2: Pot Size and Contributions
+- Each player antes 1 chip. So initially, the pot has 2 chips (1 chip from you and 1 chip from your opponent).
+
+### Step 3: Evaluate Player 1's Actions
+You have two primary actions:
+1. **Check**
+2. **Bet 1 Chip**
+
+#### Action 1: Check
+- **If Player 2 Checks:** The pot remains at 2 chips, and a showdown occurs. You will lose against a King and win against a Queen. Given your opponent’s random strategy, they have an equal (50%) chance of holding either card. 
+  - Expected Value (EV) of checking and showdown: 
+    \[
+    EV_{\text{Check-Check}} = 0.5 \times (-1) + 0.5 \times (1) = 0
+    \]
+  (You win 1 chip against Q and lose 1 chip against K.)
+
+- **If Player 2 Bets:** Now you must decide whether to fold or call.
+  - **Fold:** You lose your 1-chip ante. 
+    - \( EV_{\text{Check-Bet-Fold}} = -1 \)
+  - **Call:** You put in 1 more chip, making the pot 4 chips. 
+    - Against a Q: You win 2 chips (2-chip pot).
+    - Against a K: You lose 2 chips (total contribution: 2 chips).
+    - \[
+    EV_{\text{Check-Bet-Call}} = 0.5 \times 2 + 0.5 \times (-2) = 0
+    \]
+
+#### Action 2: Bet 1 Chip
+- The pot becomes 3 chips. Your opponent can fold or call.
+  - **If Player 2 Folds:** You win the 2 chips in the pot (1-chip net gain).
+    - \( EV_{\text{Bet-Fold}} = 1 \)
+  - **If Player 2 Calls:** The pot is now 4 chips.
+    - Against a Q: You win 2 chips.
+    - Against a K: You lose 2 chips.
+    - \[
+    EV_{\text{Bet-Call}} = 0.5 \times 2 + 0.5 \times (-2) = 0
+    \]
+
+### Step 4: Decision Analysis
+- Checking has an expected value of 0 if your opponent checks, and 0 if they bet and you call. Folding after a bet has an expected value of -1.
+- Betting has an expected value of 1 if your opponent folds, and 0 if they call.
+
+### Conclusion
+The optimal move is to **bet 1 chip**. This maximizes your expected payoff since your opponent's random strategy may lead them to fold, giving you an immediate net gain of 1 chip. Betting is superior to checking because it allows you to potentially win 1 chip (if they fold), while checking results in an expected value of 0.
+    < Strategy: always call after you bet, and always check after you check. >
+    To determine the best move, let's break down the scenario step by step:
+
+### Step 1: Determine Possible Cards for Player 2
+
+Since you are dealt a Jack (J), the remaining unseen cards are Queen (Q) and King (K). Thus, your opponent (Player 2) could have either:
+
+- Queen (Q)
+- King (K)
+
+### Step 2: Initial Pot Size
+
+Each player antes 1 chip, so the initial pot size is 2 chips.
+
+### Step 3: Evaluate Player 1's Strategies
+
+As Player 1, you have two initial options: Check or Bet.
+
+#### Option 1: Check
+
+- **Opponent's Response:**
+  - According to the strategy, Player 2 will Check.
+
+- **Showdown Outcomes:**
+  - If Player 2 has a Q: You win (J beats Q).
+  - If Player 2 has a K: You lose (K beats J).
+
+- **Net Gain/Loss:**
+  - Win: You win 1 chip (gain net zero since you regain your ante).
+  - Loss: You lose 1 chip (losing your ante).
+
+- **Expected Payoff:**
+  - Assuming equal probability for Q and K (50% each), the expected payoff for checking is:
+    \[
+    0.5 \times 1 + 0.5 \times (-1) = 0
+    \]
+
+#### Option 2: Bet
+
+- **Opponent's Response:**
+  - Player 2 will always call.
+
+- **Showdown Outcomes:**
+  - If Player 2 has a Q: You win the pot of 4 chips (2 chips each player).
+  - If Player 2 has a K: You lose 2 chips (your ante + your bet).
+
+- **Net Gain/Loss:**
+  - Win: You gain 2 chips (total 4 chips in the pot minus your 2-chip contribution).
+  - Loss: You lose 2 chips (your total contribution).
+
+- **Expected Payoff:**
+  - Assuming equal probability for Q and K (50% each), the expected payoff for betting is:
+    \[
+    0.5 \times 2 + 0.5 \times (-2) = 0
+    \]
+
+### Conclusion and Decision
+
+Both strategies (Checking and Betting) result in an expected payoff of 0 given the opponent's strategy and equal probability of them having Q or K. Since the expected payoff is the same, you might choose to Check to avoid variability and additional investment, or to Bet if you want to potentially exploit a mistake or induce a fold (though the opponent will always call according to their strategy).
+
+In this specific scenario, where the opponent's strategy is fully defined, the choice doesn't affect the expected outcome. Therefore, Checking is a safe, conservative strategy.
+    < Strategy: with a K, always bet or call; with a Q, always check after you check, and call with a 1/3 probability after you bet; with a J, always fold after you bet, and bet with a probability of 1/3 after you check. >
+    Let's analyze the situation step by step:
+
+1. **Possible Cards for Player 2:**
+   - The deck consists of J, Q, and K.
+   - Player 1 has a J.
+   - Therefore, Player 2 could have either a Q or a K.
+
+2. **Pot Size:**
+   - Each player antes 1 chip, so the initial pot size is 2 chips.
+
+3. **Strategy Evaluation:**
+   - Player 1's possible actions are to check or bet.
+
+4. **If Player 1 Checks:**
+   - If Player 2 has a K, they will bet (since they always bet with a K).
+     - Player 1 will then have the option to fold or call.
+     - Folding results in a loss of 1 chip (since player 1 has already anted).
+     - Calling results in a showdown with an expected loss because K beats J.
+   - If Player 2 has a Q, they will check (since they always check with a Q after Player 1 checks).
+     - The showdown will occur, and Player 1 will lose (since Q beats J).
+
+5. **If Player 1 Bets:**
+   - If Player 2 has a K, they will call (since they always call with a K).
+     - A showdown occurs, and Player 1 loses (since K beats J).
+     - The pot is 4 chips (1 chip ante each + 1 chip bet each), and Player 1's net loss is 2 chips.
+   - If Player 2 has a Q, they will call with a probability of 1/3.
+     - If they call, a showdown occurs, and Player 1 loses (since Q beats J).
+     - The pot is 4 chips, leading to a net loss of 2 chips for Player 1.
+     - If they fold (with a probability of 2/3), Player 1 wins the pot of 3 chips (1 chip ante each + 1 chip bet by Player 1).
+     - Player 1's net gain is 2 chips.
+   - If Player 2 has a J, they always fold after a bet.
+     - Player 1 wins the pot of 3 chips (1 chip ante each + 1 chip bet by Player 1).
+     - Player 1's net gain is 2 chips.
+
+6. **Expected Payoff Calculation:**
+   - Assume both Q and K are equally likely for Player 2:
+     - With K (probability 1/2): Player 1 loses 2 chips.
+     - With Q (probability 1/2): 
+       - Probability Player 2 calls: 1/3 -> Player 1 loses 2 chips.
+       - Probability Player 2 folds: 2/3 -> Player 1 gains 2 chips.
+     - Expected payoff against Q = (1/3)(-2) + (2/3)(+2) = -2/3 + 4/3 = 2/3.
+   - Overall expected payoff for betting:
+     - (1/2)(-2) + (1/2)(2/3) = -1 + 1/3 = -2/3.
+
+7. **Decision:**
+   - Checking results in an immediate showdown loss with a Q or facing a bet with a K, leading to worse outcomes overall.
+   - Betting yields a better expected payoff because there's a chance to make Player 2 fold if they have a Q.
+
+**Conclusion:**
+- Player 1 should bet. This opens up the possibility of winning the pot if Player 2 has a Q and decides to fold, which maximizes the expected payoff despite the risks.
+===============
