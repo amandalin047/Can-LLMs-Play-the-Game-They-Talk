@@ -1,0 +1,90 @@
+Check: 0.9997 | Bet: 0.0003 |  Check: 0.0 | **: 0.0 ; Call: 0.9903 | Fold: 0.0097 |  Call: 0.0 | call: 0.0
+Bet: 1.0 |  Bet: 0.0 | Check: 0.0 |  : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | Fold: 0.0 ; Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | _fold: 0.0
+Bet: 1.0 |  Bet: 0.0 | Check: 0.0 |  : 0.0
+Bet: 0.6225 | Check: 0.3775 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 | Check: 0.0 |  Bet: 0.0 | : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | _fold: 0.0
+Bet: 0.9399 | Check: 0.0601 |  Bet: 0.0 | bet: 0.0
+Bet: 0.9995 | Check: 0.0005 |  Bet: 0.0 | bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Check: 0.9999 | Bet: 0.0001 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | _fold: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | _fold: 0.0
+Bet: 0.9972 | Check: 0.0028 |  Bet: 0.0 | bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 0.9914 | Check: 0.0086 |  Bet: 0.0 | bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 0.977 | Check: 0.023 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | Check: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 | Call: 0.0 | _fold: 0.0 |  Fold: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 | _fold: 0.0 |  Fold: 0.0 | Call: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 0.9954 | Check: 0.0046 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | Check: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 |  : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0
+Bet: 0.9994 | Check: 0.0006 |  Bet: 0.0 | : 0.0
+Bet: 0.9998 | Check: 0.0002 |  Bet: 0.0 | bet: 0.0
+Bet: 0.9972 | Check: 0.0028 |  Bet: 0.0 | bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0 ; Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | : 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 |  : 0.0
+Bet: 0.9999 | Check: 0.0001 |  Bet: 0.0 |  : 0.0
+Bet: 0.9997 | Check: 0.0003 |  Bet: 0.0 | bet: 0.0
+Bet: 0.989 | Check: 0.011 |  Bet: 0.0 | bet: 0.0
+Bet: 0.9994 | Check: 0.0006 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 |  Bet: 0.0 | Check: 0.0 | : 0.0
+Bet: 0.9992 | Check: 0.0008 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | Check: 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | Check: 0.0
+Bet: 0.9991 | Check: 0.0009 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | Check: 0.0
+Bet: 0.9948 | Check: 0.0052 |  Bet: 0.0 | bet: 0.0
+Bet: 0.9968 | Check: 0.0032 |  Bet: 0.0 | bet: 0.0
+Bet: 1.0 | Check: 0.0 | : 0.0 |  Bet: 0.0
+Bet: 0.9987 | Check: 0.0013 |  Bet: 0.0 | **: 0.0
+Bet: 1.0 | Check: 0.0 |  Bet: 0.0 | : 0.0
+Bet: 1.0 | Check: 0.0 |  Bet: 0.0 |  : 0.0
+Bet: 0.9999 | Check: 0.0001 |  Bet: 0.0 | bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 0.9996 | Check: 0.0004 |  Bet: 0.0 | **: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 0.9996 | Check: 0.0004 |  Bet: 0.0 | : 0.0
+Bet: 1.0 | : 0.0 | Check: 0.0 |  Bet: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | I'm: 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | Check: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | I'm: 0.0
+Bet: 0.9998 | Check: 0.0002 |  Bet: 0.0 | : 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | Check: 0.0
+Bet: 1.0 | Check: 0.0 | : 0.0 |  Bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 |  Fold: 0.0 | Call: 0.0 | _fold: 0.0
+Bet: 1.0 |  Bet: 0.0 | Check: 0.0 | : 0.0
+Check: 1.0 |  Check: 0.0 | Bet: 0.0 | 	Check: 0.0 ; Fold: 1.0 |  Fold: 0.0 | : 0.0 |  : 0.0
+Check: 1.0 |  Check: 0.0 | Bet: 0.0 | 	Check: 0.0 ; Fold: 1.0 | : 0.0 |  Fold: 0.0 |  : 0.0
+Bet: 1.0 |  Bet: 0.0 | Check: 0.0 | : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0
+Bet: 0.9999 | Check: 0.0001 |  Bet: 0.0 | : 0.0
+Bet: 1.0 | Check: 0.0 |  Bet: 0.0 | : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 |  : 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 |  : 0.0
+Check: 1.0 |  Check: 0.0 | : 0.0 | Bet: 0.0 ; Fold: 1.0 |  Fold: 0.0 | : 0.0 | F: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0 ; Fold: 1.0 | : 0.0 |  Fold: 0.0 | F: 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | **: 0.0
+Check: 1.0 |  Check: 0.0 | : 0.0 | Bet: 0.0 ; Fold: 1.0 | F: 0.0 |  Fold: 0.0 | : 0.0
+Bet: 1.0 |  Bet: 0.0 | Check: 0.0 | Please: 0.0
+Bet: 0.9999 | Check: 0.0001 |  Bet: 0.0 | bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 |  : 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 |  : 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | Check: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 	Check: 0.0 ; Fold: 1.0 | : 0.0 |  Fold: 0.0 | F: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | : 0.0 ; Fold: 1.0 |  Fold: 0.0 | F: 0.0 | : 0.0
+Bet: 1.0 | Check: 0.0 |  Bet: 0.0 | : 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | Check: 0.0
+Bet: 1.0 |  Bet: 0.0 | : 0.0 | **: 0.0
+Check: 1.0 | : 0.0 |  Check: 0.0 | Bet: 0.0 ; Fold: 1.0 |  Fold: 0.0 | : 0.0 |  : 0.0
+Bet: 1.0 | : 0.0 |  Bet: 0.0 | I'm: 0.0
