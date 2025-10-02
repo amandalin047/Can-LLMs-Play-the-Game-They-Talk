@@ -80,7 +80,7 @@ class ChatRoom:
                         history_messages_key="chat_memory")
         self.runnable = runnable
 
-    def start_chat(self, session_ids, auto_input=None, **kwargs):
+    def start_chat(self, session_ids, auto_input=None, chat_log=True, **kwargs):
         '''
         supports multiple human-LLM chat sessions (there's one human and one LLM in each session,
         and the LLM is of the same model)
@@ -107,9 +107,10 @@ class ChatRoom:
 
             response_contents = [r.content if type(r) != str else r for r in responses]
             print("LLM: ", response_contents)
-            with open("chat_log.txt", "a") as f:
-                for ID, input_, response in zip(session_ids, human_inputs, response_contents):
-                    f.write(f"**SESSION {ID}**\n[Bot/Human]: {input_}\n\n[{self.llm}]: {response}\n\n")
+            if chat_log:
+                with open("chat_log.txt", "a") as f:
+                    for ID, input_, response in zip(session_ids, human_inputs, response_contents):
+                        f.write(f"**SESSION {ID}**\n[Bot/Human]: {input_}\n\n[{self.llm}]: {response}\n\n")
             i += 1
             if auto_input is None:
                 human_inputs = [input(ID+":") for ID in session_ids]
