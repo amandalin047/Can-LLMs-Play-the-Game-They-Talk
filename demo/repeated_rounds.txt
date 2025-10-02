@@ -1,0 +1,367 @@
+(J, Q; Check, Check) 
+(J, Q; Check, Check) > (J, Q; Check, Check) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Fold) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Fold) > (K, Q; Bet, Fold) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Fold) > (K, Q; Bet, Fold) > (Q, J; Check, Check) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Fold) > (K, Q; Bet, Fold) > (Q, J; Check, Check) > (Q, J; Check, Check) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Fold) > (K, Q; Bet, Fold) > (Q, J; Check, Check) > (Q, J; Check, Check) > (J, Q; Check, Check) 
+(J, Q; Check, Check) > (J, Q; Check, Check) > (K, Q; Bet, Call) > (J, K; Check, Bet / Fold) > (K, Q; Bet, Fold) > (K, Q; Bet, Fold) > (Q, J; Check, Check) > (Q, J; Check, Check) > (J, Q; Check, Check) > (Q, K; Check, Bet / Call) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (K, Q; Bet, Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (Q, J; Check, Check) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (Q, J; Check, Check) > (J, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 10
+
+Player 1 (Average Payoff: 0.0)
+K: Bet * 3 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 4 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (100.0%) / Fold * 0 (0.0%) 
+J: Call * 0 (0.0%) / Fold * 1 (100.0%) 
+
+Player 2 (Average Payoff: 0.0)
+K: Bet * 2 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 3 (50.0%) / Call * 1 (16.67%) / Fold * 2 (33.33%)
+J: Bet * 0 (0.0%) / Check * 2 (100.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (Q, J; Check, Bet / Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (Q, J; Check, Check) > (J, K; Check, Bet / Fold) > (J, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) > (Q, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) > (Q, K; Check, Bet / Fold) > (K, J; Bet, Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) > (Q, K; Check, Bet / Fold) > (K, J; Bet, Fold) > (K, J; Bet, Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) > (Q, K; Check, Bet / Fold) > (K, J; Bet, Fold) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) > (Q, K; Check, Bet / Fold) > (K, J; Bet, Fold) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) 
+
+ROUNDS 1 - 20
+
+Player 1 (Average Payoff: -0.45)
+K: Bet * 4 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 8 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 8 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (20.0%) / Fold * 4 (80.0%) 
+J: Call * 0 (0.0%) / Fold * 4 (100.0%) 
+
+Player 2 (Average Payoff: 0.45)
+K: Bet * 7 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 4 (50.0%) / Call * 1 (12.5%) / Fold * 3 (37.5%)
+J: Bet * 2 (40.0%) / Check * 3 (60.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+> (K, J; Bet, Fold) > (K, Q; Bet, Fold) > (J, Q; Check, Check) > (K, J; Bet, Fold) > (Q, K; Check, Bet / Fold) > (K, J; Bet, Fold) > (K, J; Bet, Fold) > (J, K; Check, Bet / Fold) > (Q, K; Check, Bet / Fold) > (K, J; Bet, Fold) 
+
+ROUNDS 1 - 30
+
+Player 1 (Average Payoff: -0.125)
+K: Bet * 10 (100.0%) / Check * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 10 (100.0%) 
+J: Bet * 0 (0.0%) / Check * 10 (100.0%)
+=======================
+K: Call * 0 (nan%) / Fold * 0 (nan%)
+Q: Call * 1 (14.29%) / Fold * 6 (85.71%) 
+J: Call * 0 (0.0%) / Fold * 5 (100.0%) 
+
+Player 2 (Average Payoff: 0.125)
+K: Bet * 10 (100.0%) / Check * 0 (0.0%) / Call * 0 (0.0%) / Fold * 0 (0.0%)
+Q: Bet * 0 (0.0%) / Check * 5 (50.0%) / Call * 1 (10.0%) / Fold * 4 (40.0%)
+J: Bet * 2 (20.0%) / Check * 3 (30.0%) / Call * 0 (0.0%) / Fold * 5 (50.0%)
+> (J, Q; Check, Check) 

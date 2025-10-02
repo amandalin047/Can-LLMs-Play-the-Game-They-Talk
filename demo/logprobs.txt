@@ -1,0 +1,80 @@
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 | **: 0.0
+Check: 0.9743 | Bet: 0.0257 | 
+: 0.0 |  Check: 0.0
+Bet: 1.0 | Check: 0.0 | 
+: 0.0 | **: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | _fold: 0.0
+Bet: 1.0 | Check: 0.0 | 
+: 0.0 |  Bet: 0.0
+Bet: 1.0 | Check: 0.0 | 
+: 0.0 |  Bet: 0.0
+Check: 1.0 | Bet: 0.0 |  Check: 0.0 | 
+: 0.0
+Check: 0.9999 | Bet: 0.0001 |  Check: 0.0 | 
+: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Check: 0.9999 | Bet: 0.0001 | 
+: 0.0 |  Check: 0.0
+Call: 0.9025 | Fold: 0.0975 |  Call: 0.0 |  Fold: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | fold: 0.0
+Check: 1.0 | 
+: 0.0 | Bet: 0.0 | **: 0.0
+Fold: 0.9061 | Call: 0.0939 |  Fold: 0.0 | fold: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 0.9998 | Call: 0.0002 |  Fold: 0.0 | fold: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 0.9978 | Call: 0.0022 |  Fold: 0.0 | fold: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | fold: 0.0
+Bet: 1.0 | 
+: 0.0 | Check: 0.0 | **: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | 
+: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 | 
+: 0.0 |  Fold: 0.0
+Bet: 1.0 | 
+: 0.0 | Check: 0.0 | **: 0.0
+Bet: 1.0 | 
+: 0.0 | **: 0.0 |  Bet: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Bet: 1.0 | 
+: 0.0 |  Bet: 0.0 | **: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | fold: 0.0
+Bet: 1.0 | 
+: 0.0 | **: 0.0 |  Bet: 0.0
+Bet: 1.0 | 
+: 0.0 | **: 0.0 |  Bet: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | 
+: 0.0
+Check: 1.0 | 
+: 0.0 | Bet: 0.0 |  Check: 0.0
+Fold: 1.0 | Call: 0.0 |  Fold: 0.0 | 
+: 0.0
+Bet: 1.0 | 
+: 0.0 | **: 0.0 |  Bet: 0.0
+Check: 1.0 | Bet: 0.0 | 
+: 0.0 |  Check: 0.0
+Bet: 1.0 | 
+: 0.0 | **: 0.0 |  Bet: 0.0
